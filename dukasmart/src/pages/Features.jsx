@@ -1,104 +1,136 @@
 import React from 'react'
 import Section from '../components/UI/Section'
-import FeatureCard from '../components/UI/FeatureCard'
-import GradientBackground from '../components/UI/GradientBackground'
-
-// Import business card image
 import BusinessCard from '../assests/stationary/business card/Business Card-01.jpg'
+import BrandPattern from '../assests/brand pattern/transperant png/brand pattern-01.png'
 
 const Features = () => {
   const features = [
     {
-      title: "Real-time Sales Tracking",
-      description: "Monitor your daily sales with beautiful charts and analytics. See trends, top products, and revenue insights at a glance.",
-      icon: <span className="text-xl">📈</span>,
-      details: ["Live sales dashboard", "Revenue analytics", "Product performance", "Customer insights"]
+      title: "Real-Time Sales Tracking",
+      description: "See your sales data instantly with clear charts and reports. Track your best products and understand your customers better.",
+      number: "01",
+      details: ["Live sales dashboard", "Revenue reports", "Product performance", "Customer insights"]
     },
     {
       title: "Smart Inventory Management",
-      description: "Never run out of stock again. Get low-stock alerts and manage your inventory across multiple locations.",
-      icon: <span className="text-xl">📦</span>,
-      details: ["Stock level monitoring", "Automatic reorder alerts", "Multi-location support", "Barcode scanning"]
+      description: "Never run out of stock again. Get alerts when items are low and manage inventory across all your locations.",
+      number: "02",
+      details: ["Stock level alerts", "Automatic reorder reminders", "Multi-location support", "Barcode scanning"]
     },
     {
-      title: "Customer Relationship Management",
-      description: "Build lasting relationships with your customers. Track purchase history and reward loyalty.",
-      icon: <span className="text-xl">🧑‍🤝‍🧑</span>,
+      title: "Customer Management",
+      description: "Build strong relationships with your customers. Track their purchases and create loyalty programs that keep them coming back.",
+      number: "03",
       details: ["Customer profiles", "Purchase history", "Loyalty programs", "Marketing campaigns"]
     },
     {
-      title: "Multi-Device Access",
-      description: "Access your data anywhere, anytime. Works seamlessly on phone, tablet, and desktop.",
-      icon: <span className="text-xl">📱</span>,
+      title: "Access Anywhere",
+      description: "Use DukaSmart on your phone, tablet, or computer. Your data syncs automatically so you can work from anywhere.",
+      number: "04",
       details: ["Mobile app", "Web dashboard", "Offline mode", "Cloud sync"]
     },
     {
-      title: "Offline-First Design",
-      description: "Keep selling even without internet. All data syncs automatically when connection is restored.",
-      icon: <span className="text-xl">⚡</span>,
+      title: "Works Without Internet",
+      description: "Keep working even when your internet is down. All your data saves automatically and syncs when you're back online.",
+      number: "05",
       details: ["Works offline", "Auto-sync", "No data loss", "Reliable performance"]
     },
     {
-      title: "Business Intelligence",
-      description: "Make informed decisions with actionable insights and comprehensive business reports.",
-      icon: <span className="text-xl">🧠</span>,
+      title: "Business Reports",
+      description: "Make smart decisions with detailed reports. See what's working, what's not, and where to focus your efforts.",
+      number: "06",
       details: ["Sales reports", "Profit analysis", "Trend forecasting", "Performance metrics"]
     }
   ]
 
   return (
-    <div className="relative isolate">
-      <GradientBackground />
-      <Section>
-        <div className="py-16 sm:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-              Powerful Features
-            </h1>
-            <p className="mt-6 text-lg text-gray-600">
-              Everything you need to run your retail business efficiently, from inventory to customer management.
-            </p>
-          </div>
-          
-          <div className="mt-16 grid gap-8 lg:grid-cols-2">
-            {features.map((feature, index) => (
-              <div key={index} className="rounded-2xl bg-white/70 p-8 backdrop-blur">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-                    {feature.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                    <p className="mt-2 text-gray-600">{feature.description}</p>
-                    <ul className="mt-4 space-y-2">
-                      {feature.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="flex items-center gap-2 text-sm text-gray-500">
-                          <span className="h-1.5 w-1.5 rounded-full bg-indigo-600"></span>
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Brand Pattern Bookmark */}
+      <div className="fixed top-20 right-8 z-50 opacity-20">
+        <img 
+          src={BrandPattern} 
+          alt="DukaSmart Brand Pattern" 
+          className="w-32 h-32 object-contain"
+        />
+      </div>
+
+      {/* Split background - White left, Purple right */}
+      <div className="absolute inset-0">
+        <div className="w-1/2 h-full bg-white absolute left-0 top-0"></div>
+        <div className="w-1/2 h-full bg-purple-950 absolute right-0 top-0"></div>
+      </div>
+
+      {/* Hero Section */}
+      <Section className="pt-32 pb-20 relative z-10">
+        <div className="text-center max-w-4xl mx-auto space-y-8">
+          <h1 className="text-5xl lg:text-7xl font-light leading-tight">
+            <span className="text-black">DukaSmart</span> <span className="text-black">Features</span>
+          </h1>
+          <p className="text-xl text-black font-light leading-relaxed">
+            Everything you need to run your business better, grow faster, and make more money.
+          </p>
+        </div>
+      </Section>
+      
+      {/* Features Grid */}
+      <Section className="pb-32 relative z-10">
+        <div className="grid gap-16 lg:grid-cols-2">
+          {features.map((feature, index) => (
+            <div key={index} className="space-y-6">
+              <div className="text-6xl font-light text-purple-600">{feature.number}</div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-light text-black">{feature.title}</h3>
+                <p className="text-lg text-black font-light leading-relaxed">{feature.description}</p>
+                <div className="space-y-3 pt-4">
+                  {feature.details.map((detail, detailIndex) => (
+                    <div key={detailIndex} className="flex items-start gap-4">
+                      <div className="w-2 h-2 bg-purple-600 rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-lg text-black font-light">{detail}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="mt-16 rounded-2xl border border-gray-100 bg-gradient-to-r from-indigo-600 to-fuchsia-600 p-1">
-            <div className="flex flex-col items-center justify-between gap-6 rounded-2xl bg-white/90 px-8 py-12 sm:flex-row">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">Professional Branding</h3>
-                <p className="mt-2 text-gray-600">
-                  Generate beautiful invoices, business cards, and marketing materials with your brand identity.
-                </p>
-                <ul className="mt-4 space-y-1 text-sm text-gray-600">
-                  <li>• Custom invoice templates</li>
-                  <li>• Branded business cards</li>
-                  <li>• Marketing materials</li>
-                  <li>• Professional letterheads</li>
-                </ul>
+            </div>
+          ))}
+        </div>
+        
+        {/* Professional Branding Section */}
+        <div className="mt-32 pt-32 border-t border-gray-200">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="space-y-8">
+              <h2 className="text-4xl lg:text-6xl font-light text-black leading-tight">
+                Professional Branding
+              </h2>
+              <p className="text-xl text-black font-light leading-relaxed">
+                Create beautiful invoices, business cards, and marketing materials that make your business look professional.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-lg text-black font-light">Custom invoice templates</span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-lg text-black font-light">Professional business cards</span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-lg text-black font-light">Marketing materials</span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-lg text-black font-light">Professional letterheads</span>
+                </div>
               </div>
-              <img src={BusinessCard} alt="Business card mockup" className="h-32 w-auto rounded-xl object-cover shadow-lg" />
+            </div>
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                <img 
+                  src={BusinessCard} 
+                  alt="Business card mockup" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

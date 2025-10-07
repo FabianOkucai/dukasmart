@@ -1,184 +1,198 @@
 import React from 'react'
 import Section from '../components/UI/Section'
-import GradientBackground from '../components/UI/GradientBackground'
+import BrandPattern from '../assests/brand pattern/transperant png/brand pattern-01.png'
 
 const Contact = () => {
   return (
-    <div className="relative isolate">
-      <GradientBackground />
-      <Section>
-        <div className="py-16 sm:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-              Get in Touch
-            </h1>
-            <p className="mt-6 text-lg text-gray-600">
-              Ready to transform your retail business? We're here to help you get started.
-            </p>
-          </div>
-          
-          <div className="mx-auto mt-16 max-w-4xl">
-            <div className="grid gap-8 lg:grid-cols-2">
-              {/* Contact Information */}
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Brand Pattern Bookmark */}
+      <div className="fixed top-20 right-8 z-50 opacity-20">
+        <img 
+          src={BrandPattern} 
+          alt="DukaSmart Brand Pattern" 
+          className="w-32 h-32 object-contain"
+        />
+      </div>
+
+      {/* Split background - Purple left, White right */}
+      <div className="absolute inset-0">
+        <div className="w-1/2 h-full bg-purple-950 absolute left-0 top-0"></div>
+        <div className="w-1/2 h-full bg-white absolute right-0 top-0"></div>
+      </div>
+
+      {/* Hero Section */}
+      <Section className="pt-32 pb-20 relative z-10">
+        <div className="text-center max-w-4xl mx-auto space-y-8">
+          <h1 className="text-5xl lg:text-7xl font-light leading-tight">
+            <span className="text-black">Get Started</span> <span className="text-black">Today</span>
+          </h1>
+          <p className="text-xl text-black font-light leading-relaxed">
+            Ready to grow your business with DukaSmart? 
+            Contact us and we'll help you get started.
+          </p>
+        </div>
+      </Section>
+      
+      <Section className="pb-32 relative z-10">
+        <div className="grid gap-20 lg:grid-cols-2">
+          {/* Contact Information */}
+          <div className="space-y-12">
+            <div className="space-y-8">
+              <h2 className="text-3xl font-light text-black">
+                Contact Information
+              </h2>
+              
               <div className="space-y-8">
-                <div className="rounded-2xl bg-white/70 p-8 backdrop-blur">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
-                        📧
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-900">Email</h4>
-                        <p className="text-gray-600">hello@dukasmart.com</p>
-                        <p className="text-gray-600">support@dukasmart.com</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
-                        📱
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-900">Phone</h4>
-                        <p className="text-gray-600">+254 700 000 000</p>
-                        <p className="text-gray-600">+254 800 000 000</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
-                        📍
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-900">Address</h4>
-                        <p className="text-gray-600">
-                          Nairobi, Kenya<br />
-                          East Africa
-                        </p>
-                      </div>
-                    </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-light text-black">Email</h3>
+                  <div className="space-y-1">
+                    <p className="text-xl text-black font-light">hello@dukasmart.com</p>
+                    <p className="text-xl text-black font-light">support@dukasmart.com</p>
                   </div>
                 </div>
                 
-                <div className="rounded-2xl bg-white/70 p-8 backdrop-blur">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Hours</h3>
-                  <div className="space-y-2 text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Monday - Friday</span>
-                      <span>8:00 AM - 6:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Saturday</span>
-                      <span>9:00 AM - 4:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Sunday</span>
-                      <span>Closed</span>
-                    </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-light text-black">Phone</h3>
+                  <div className="space-y-1">
+                    <p className="text-xl text-black font-light">+254 702 355935</p>
+                    <p className="text-xl text-black font-light">+254 800 000 000</p>
                   </div>
                 </div>
+                
+                <div className="space-y-2">
+                  <h3 className="text-lg font-light text-black">Address</h3>
+                  <div className="space-y-1">
+                    <p className="text-xl text-black font-light">Nairobi, Kenya</p>
+                    <p className="text-xl text-black font-light">East Africa</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-8 pt-12 border-t border-gray-200">
+              <h2 className="text-3xl font-light text-black">
+                Business Hours
+              </h2>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-lg font-light text-black">Monday - Friday</span>
+                  <span className="text-lg font-light text-black">8:00 AM - 6:00 PM</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-lg font-light text-black">Saturday</span>
+                  <span className="text-lg font-light text-black">9:00 AM - 4:00 PM</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-lg font-light text-black">Sunday</span>
+                  <span className="text-lg font-light text-black">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Contact Form */}
+          <div className="space-y-8">
+            <h2 className="text-3xl font-light text-black">
+              Send us a Message
+            </h2>
+            
+            <form className="space-y-8">
+              <div className="space-y-2">
+                <label htmlFor="name" className="block text-sm font-light text-black">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="w-full border-b border-gray-300 px-0 py-4 text-lg font-light text-black bg-transparent focus:border-purple-600 focus:outline-none transition-colors"
+                  placeholder="Your full name"
+                />
               </div>
               
-              {/* Contact Form */}
-              <div className="rounded-2xl bg-white/70 p-8 backdrop-blur">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Send us a Message</h3>
-                
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
-                      placeholder="+254 700 000 000"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="demo">Request a Demo</option>
-                      <option value="support">Technical Support</option>
-                      <option value="sales">Sales Inquiry</option>
-                      <option value="partnership">Partnership</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
-                      placeholder="Tell us how we can help you..."
-                    />
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full rounded-lg bg-indigo-600 px-6 py-3 text-white font-medium shadow-lg shadow-indigo-600/30 hover:bg-indigo-700 transition-colors"
-                  >
-                    Send Message
-                  </button>
-                </form>
+              <div className="space-y-2">
+                <label htmlFor="email" className="block text-sm font-light text-black">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full border-b border-gray-300 px-0 py-4 text-lg font-light text-black bg-transparent focus:border-purple-600 focus:outline-none transition-colors"
+                  placeholder="your@email.com"
+                />
               </div>
-            </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="phone" className="block text-sm font-light text-black">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="w-full border-b border-gray-300 px-0 py-4 text-lg font-light text-black bg-transparent focus:border-purple-600 focus:outline-none transition-colors"
+                  placeholder="+254 700 000 000"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="subject" className="block text-sm font-light text-black">
+                  Subject
+                </label>
+                <select
+                  id="subject"
+                  name="subject"
+                  className="w-full border-b border-gray-300 px-0 py-4 text-lg font-light text-black bg-transparent focus:border-purple-600 focus:outline-none transition-colors"
+                >
+                  <option value="">Select a subject</option>
+                  <option value="demo">Request a Demo</option>
+                  <option value="support">Technical Support</option>
+                  <option value="sales">Sales Inquiry</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="message" className="block text-sm font-light text-black">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="w-full border-b border-gray-300 px-0 py-4 text-lg font-light text-black bg-transparent focus:border-purple-600 focus:outline-none transition-colors resize-none"
+                  placeholder="Tell us how we can help you..."
+                />
+              </div>
+              
+              <div className="pt-8">
+                <button
+                  type="submit"
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-12 py-4 text-sm font-light tracking-wide uppercase transition-all duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
           </div>
-          
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-4 rounded-full bg-indigo-50 px-6 py-3">
-              <span className="text-sm font-medium text-gray-700">
-                💬 Need immediate help? Chat with us on WhatsApp
-              </span>
-              <a 
-                href="https://wa.me/254700000000" 
-                className="rounded-full bg-green-600 px-4 py-2 text-white text-sm font-medium hover:bg-green-700 transition-colors"
-              >
-                Start Chat
-              </a>
-            </div>
+        </div>
+        
+        <div className="mt-32 text-center">
+          <div className="space-y-6">
+            <h3 className="text-2xl font-light text-black">
+              Need Quick Help?
+            </h3>
+            <p className="text-lg text-black font-light">
+              Chat with us on WhatsApp for instant support
+            </p>
+            <a 
+              href="https://wa.me/254702355935" 
+              className="inline-block border border-gray-300 hover:border-purple-600 text-gray-700 hover:text-purple-600 px-12 py-4 text-sm font-light tracking-wide uppercase transition-all duration-300"
+            >
+              Start Chat
+            </a>
           </div>
         </div>
       </Section>

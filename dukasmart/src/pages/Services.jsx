@@ -1,0 +1,85 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Section from '../components/UI/Section'
+import AppIcon from '../assests/app icons/Transperent Png/app icons-01.png'
+
+const Services = () => {
+  const services = [
+    {
+      title: "Business Analytics",
+      description: "Get deep insights into your business performance with advanced analytics tools.",
+      features: ["Real-time dashboards", "Custom reports", "Performance metrics"],
+      color: "purple"
+    },
+    {
+      title: "Inventory Management", 
+      description: "Keep track of stock levels and never run out of best-selling items.",
+      features: ["Stock tracking", "Low stock alerts", "Supplier management"],
+      color: "blue"
+    },
+    {
+      title: "Customer Management",
+      description: "Build stronger relationships with customers and increase loyalty.",
+      features: ["Customer profiles", "Purchase history", "Loyalty programs"],
+      color: "green"
+    },
+    {
+      title: "Payment Processing",
+      description: "Accept payments seamlessly with integrated payment solutions.",
+      features: ["Multiple payment methods", "Secure transactions", "Instant settlements"],
+      color: "orange"
+    },
+    {
+      title: "Mobile Solutions",
+      description: "Manage your business on the go with mobile applications.",
+      features: ["iOS & Android apps", "Offline capabilities", "Real-time sync"],
+      color: "red"
+    },
+    {
+      title: "Security & Backup",
+      description: "Keep business data safe with enterprise-grade security.",
+      features: ["256-bit encryption", "Automatic backups", "Data recovery"],
+      color: "indigo"
+    }
+  ]
+
+  return (
+    <div className="min-h-screen bg-gray-100 p-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="bg-white rounded-3xl p-12 shadow-lg">
+          <div className="mb-8">
+            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <img 
+                src={AppIcon} 
+                alt="DukaSmart logo" 
+                className="h-12 w-12 object-contain" 
+              />
+              <span className="text-xl font-light text-black">DukaSmart</span>
+            </Link>
+          </div>
+          
+          <h1 className="text-5xl font-light text-black mb-8 text-center">Our Services</h1>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Comprehensive business solutions designed to help you succeed.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className={`bg-${service.color}-50 rounded-2xl p-8`}>
+                <h3 className="text-2xl font-light text-black mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  {service.features.map((feature, i) => (
+                    <li key={i}>• {feature}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Services

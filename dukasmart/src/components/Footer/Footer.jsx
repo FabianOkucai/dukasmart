@@ -1,138 +1,120 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin,
-  ArrowRight
-} from 'lucide-react'
-
+import React, { useEffect } from 'react'
 import Section from '../UI/Section'
-import LogoMain from '../../assests/logo files/Dukasmart-files-01.png'
+import FacebookIcon from '../../assests/social media icon/1/social media icon-01.png'
+import TwitterIcon from '../../assests/social media icon/1/social media icon-02.png'
+import LinkedInIcon from '../../assests/social media icon/1/social media icon-03.png'
+import AppIcon from '../../assests/app icons/Transperent Png/app icons-01.png'
 
 const Footer = () => {
-  const quickLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Features', href: '/features' },
-    { name: 'Contact', href: '/contact' }
-  ]
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
 
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' }
-  ]
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+        }
+      })
+    }, observerOptions)
+
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right')
+    animatedElements.forEach(el => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-white/10">
-      <Section className="py-16">
-        {/* Main Footer Content */}
-        <div className="grid lg:grid-cols-3 gap-12 mb-12">
-          {/* Company Info */}
-          <div>
-            <Link to="/" className="flex items-center gap-3 mb-6">
+    <footer className="bg-purple-950 text-white py-12 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-5 left-10 w-24 h-24 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-5 right-10 w-32 h-32 bg-sky-300 rounded-full blur-3xl"></div>
+      </div>
+
+      <Section className="relative z-10">
+        <div className="grid md:grid-cols-2 gap-12 mb-8">
+          
+          {/* Brand Section */}
+          <div className="slide-in-left">
+            <div className="flex items-center gap-3 mb-4">
               <img 
-                src={LogoMain} 
+                src={AppIcon} 
                 alt="DukaSmart logo" 
-                className="h-12 w-12 object-contain rounded-xl shadow-lg bg-white/20 p-1" 
+                className="h-10 w-10 object-contain" 
               />
-              <span className="text-2xl font-bold text-white">DukaSmart</span>
-            </Link>
-            
-            <p className="text-white/70 mb-6 leading-relaxed">
-              Transform your business with intelligent solutions. Get started today and join thousands of successful businesses.
+              <span className="text-xl font-light">DukaSmart</span>
+            </div>
+            <p className="text-purple-100 mb-6 max-w-md leading-relaxed">
+              Empowering businesses with intelligent management solutions. 
+              Transform your operations, boost productivity, and drive sustainable growth.
             </p>
 
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-white/70">
-                <Mail className="w-5 h-5 text-yellow-400" />
-                <span>hello@dukasmart.com</span>
-              </div>
-              <div className="flex items-center gap-3 text-white/70">
-                <Phone className="w-5 h-5 text-yellow-400" />
-                <a href="https://wa.me/254702355935" className="hover:text-white transition-colors">+254 702 355935</a>
-              </div>
-              <div className="flex items-center gap-3 text-white/70">
-                <MapPin className="w-5 h-5 text-yellow-400" />
-                <span>Siwaka, NA </span>
-              </div>
+            {/* Social Media */}
+            <div className="flex gap-3">
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <img src={FacebookIcon} alt="Facebook" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <img src={TwitterIcon} alt="Twitter" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <img src={LinkedInIcon} alt="LinkedIn" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
+              </a>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-4">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    to={link.href}
-                    className="text-white/70 hover:text-white transition-colors text-lg"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Newsletter & CTA */}
-          <div>
-            <h3 className="text-white font-semibold mb-6">Get Started Today</h3>
-            <p className="text-white/70 mb-6 text-lg">
-              Ready to transform your business? Contact us for a free consultation.
-            </p>
-            
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 px-6 py-3 rounded-full font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg inline-flex items-center gap-2 mb-6"
-            >
-              Contact Us Now
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-
-            {/* Social Links */}
-            <div>
-              <p className="text-white/70 mb-4">Follow us</p>
-              <div className="flex gap-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
+          
+          {/* Contact Info */}
+          <div className="slide-in-right">
+            <h3 className="text-xl font-light mb-6 text-sky-300">Get in Touch</h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-purple-100 text-sm">hello@dukasmart.com</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-purple-100 text-sm">+254 702 355935</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-purple-100 text-sm">Nairobi, Kenya</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Bottom Footer */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Copyright */}
-            <div className="text-white/70 text-sm">
-              © 2025 DukaSmart. All rights reserved.
-            </div>
-
-            {/* Legal Links */}
-            <div className="flex flex-wrap gap-6">
-              <Link to="/privacy" className="text-white/70 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-white/70 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
+        
+        {/* Bottom Section */}
+        <div className="border-t border-purple-800 pt-6 fade-in">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-purple-300 text-sm">© 2025 DukaSmart. All rights reserved.</p>
+            <div className="flex gap-6 text-sm">
+              <a href="#" className="text-purple-300 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="text-purple-300 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="text-purple-300 hover:text-white transition-colors">Support</a>
             </div>
           </div>
         </div>
