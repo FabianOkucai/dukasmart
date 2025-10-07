@@ -38,8 +38,8 @@ const About = () => {
   ]
 
   const stats = [
-    { value: '106K+', label: 'Active Users', color: 'purple' },
-    { value: '50+', label: 'Countries', color: 'blue' },
+    { value: '16K+', label: 'Active Users', color: 'purple' },
+    { value: '5+', label: 'Countries', color: 'blue' },
     { value: '99.9%', label: 'Uptime', color: 'green' },
     { value: '40%', label: 'Growth Rate', color: 'orange' }
   ]
@@ -85,7 +85,7 @@ const About = () => {
                 regardless of size, deserves sophisticated technology that drives success.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Today, we're proud to serve over 106,000 businesses across 50+ countries, helping 
+                Today, we're proud to serve over 16,000 businesses across 5+ countries, helping 
                 them streamline operations, boost productivity, and achieve sustainable growth.
               </p>
             </div>
@@ -101,37 +101,6 @@ const About = () => {
                   <p className="text-gray-600">{value.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Team Section */}
-          <div className="text-center">
-            <h2 className="text-3xl font-light text-black mb-6">Leadership Team</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-light text-purple-600">EN</span>
-                </div>
-                <h3 className="text-xl font-light text-black mb-2">Edwin Nderitu</h3>
-                <p className="text-purple-600 text-sm mb-2">CEO & Founder</p>
-                <p className="text-gray-600 text-sm">Former Microsoft VP with 15+ years in enterprise software development.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-light text-blue-600">JO</span>
-                </div>
-                <h3 className="text-xl font-light text-black mb-2">Jude Ocomil</h3>
-                <p className="text-blue-600 text-sm mb-2">CTO & Co-Founder</p>
-                <p className="text-gray-600 text-sm">Ex-Google engineer specializing in scalable cloud architecture and AI systems.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-24 h-24 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-light text-green-600">FC</span>
-                </div>
-                <h3 className="text-xl font-light text-black mb-2">Fabian Chief</h3>
-                <p className="text-green-600 text-sm mb-2">Design Director</p>
-                <p className="text-gray-600 text-sm">Former Apple Inc Lead Developer with expertise in user experience design.</p>
-              </div>
             </div>
           </div>
         </div>
