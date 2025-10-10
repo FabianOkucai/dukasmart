@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Section from '../UI/Section'
 import FacebookIcon from '../../assests/social media icon/1/social media icon-01.png'
 import TwitterIcon from '../../assests/social media icon/1/social media icon-02.png'
@@ -54,15 +55,15 @@ const Footer = () => {
 
             {/* Social Media */}
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+              <Link to="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
                 <img src={FacebookIcon} alt="Facebook" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+              </Link>
+              <Link to="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
                 <img src={TwitterIcon} alt="Twitter" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+              </Link>
+              <Link to="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
                 <img src={LinkedInIcon} alt="LinkedIn" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
           
@@ -77,7 +78,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-purple-100 text-sm">hello@dukasmart.com</p>
+                  <p className="text-purple-100 text-sm">info@dukasmart.com</p>
                 </div>
               </div>
               
@@ -112,9 +113,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-purple-300 text-sm">© 2025 DukaSmart. All rights reserved.</p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-purple-300 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-purple-300 hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="text-purple-300 hover:text-white transition-colors">Support</a>
+              <Link to="/privacy" className="text-purple-300 hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-purple-300 hover:text-white transition-colors">Terms of Service</Link>
+              <Link to="/support" className="text-purple-300 hover:text-white transition-colors">Support</Link>
             </div>
           </div>
         </div>

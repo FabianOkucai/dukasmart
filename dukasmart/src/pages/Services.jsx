@@ -46,17 +46,27 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-3xl p-12 shadow-lg">
-          <div className="mb-8">
-            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <img 
-                src={AppIcon} 
-                alt="DukaSmart logo" 
-                className="h-12 w-12 object-contain" 
-              />
-              <span className="text-xl font-light text-black">DukaSmart</span>
-            </Link>
+        {/* Navigation */}
+        <div className="flex items-center justify-between py-6 mb-8 fade-in">
+          <div className="flex items-center gap-3">
+            <img 
+              src={AppIcon} 
+              alt="DukaSmart logo" 
+              className="h-12 w-12 object-contain" 
+            />
+            <span className="text-xl font-light text-black">DukaSmart</span>
           </div>
+          
+          <div className="flex items-center gap-6">
+            <Link to="/" className="text-black hover:text-purple-600 transition-colors">Home</Link>
+            <Link to="/about" className="text-black hover:text-purple-600 transition-colors">About</Link>
+            <Link to="/services" className="text-black hover:text-purple-600 transition-colors">Services</Link>
+            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-colors">
+              <Link to="/download" className="text-white">Get App</Link>
+            </button>
+          </div>
+        </div>
+        <div className="bg-white rounded-3xl p-12 shadow-lg">
           
           <h1 className="text-5xl font-light text-black mb-8 text-center">Our Services</h1>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
