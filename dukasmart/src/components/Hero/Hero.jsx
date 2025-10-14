@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import Section from '../UI/Section'
-import AppIcon1 from '../../assests/app icons/Transperent Png/app icons-01.png'
-import AppIcon2 from '../../assests/app icons/Transperent Png/app icons-02.png'
-import AppIcon3 from '../../assests/app icons/Transperent Png/app icons-03.png'
-import AppIcon4 from '../../assests/app icons/Transperent Png/app icons-04.png'
-import AppIcon from '../../assests/app icons/Transperent Png/Dukasmart_logo.png'
+// import AppIcon1 from '../../assests/app_icons/transparent_png/app_icons-01.png'
+// import AppIcon2 from '../../assests/app_icons/transparent_png/app_icons-02.png'
+// import AppIcon3 from '../../assests/app_icons/transparent_png/app_icons-03.png'
+// import AppIcon4 from '../../assests/app_icons/transparent_png/app_icons-04.png'
+import AppIcon from '../../assests/app_icons/transparent_png/Dukasmart_logo.png'
 
 const Hero = () => {
   useEffect(() => {
@@ -96,7 +96,7 @@ const Hero = () => {
                     />
                   </div>
                   
-                  {/* Second phone mockup with app icons - tilted right */}
+                  {/* Second phone mockup with app_icons - tilted right */}
                   <div className="absolute right-0 top-8 z-20 transform rotate-12">
                     <div className="w-52 h-[400px] bg-white rounded-3xl shadow-2xl p-5">
                       <div className="space-y-4">
@@ -105,19 +105,19 @@ const Hero = () => {
                         </div>
                         <div className="grid grid-cols-2 gap-3">
                           <div className="bg-gray-50 p-3 rounded-xl text-center">
-                            <img src={AppIcon1} alt="Business App" className="w-10 h-10 mx-auto mb-1" />
+                            <img src="" alt="Business App" className="w-10 h-10 mx-auto mb-1" />
                             <span className="text-xs text-gray-600">Business</span>
                           </div>
                           <div className="bg-gray-50 p-3 rounded-xl text-center">
-                            <img src={AppIcon2} alt="Sales App" className="w-10 h-10 mx-auto mb-1" />
+                            <img src="" alt="Sales App" className="w-10 h-10 mx-auto mb-1" />
                             <span className="text-xs text-gray-600">Sales</span>
                           </div>
                           <div className="bg-gray-50 p-3 rounded-xl text-center">
-                            <img src={AppIcon3} alt="Reports App" className="w-10 h-10 mx-auto mb-1" />
+                            <img src="" alt="Reports App" className="w-10 h-10 mx-auto mb-1" />
                             <span className="text-xs text-gray-600">Reports</span>
                           </div>
                           <div className="bg-gray-50 p-3 rounded-xl text-center">
-                            <img src={AppIcon4} alt="Analytics App" className="w-10 h-10 mx-auto mb-1" />
+                            <img src="" alt="Analytics App" className="w-10 h-10 mx-auto mb-1" />
                             <span className="text-xs text-gray-600">Analytics</span>
                           </div>
                         </div>

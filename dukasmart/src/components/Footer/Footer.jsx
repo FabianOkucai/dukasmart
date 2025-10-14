@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Section from '../UI/Section'
-import FacebookIcon from '../../assests/social media icon/1/social media icon-01.png'
-import TwitterIcon from '../../assests/social media icon/1/social media icon-02.png'
-import LinkedInIcon from '../../assests/social media icon/1/social media icon-03.png'
-import AppIcon from '../../assests/app icons/Transperent Png/Dukasmart_logo_white.png'
+import FacebookIcon from '../../assests/social_media_icon/1/linkedin.png'
+import TwitterIcon from '../../assests/social_media_icon/1/instagram.png'
+import LinkedInIcon from '../../assests/social_media_icon/1/mail.png'
+import AppIcon from '../../assests/app_icons/transparent_png/dukasmart_logo_white.png'
 
 const Footer = () => {
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Section from '../components/UI/Section'
-import AppIcon from '../assests/app icons/Transperent Png/dukasmart_logo.png'
+import AppIcon from '../assests/app_icons/transparent_png/dukasmart_logo.png'
 
 const Download = () => {
   return (

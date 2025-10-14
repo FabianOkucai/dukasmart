@@ -80,17 +80,17 @@ const Features = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                   <div className="grid grid-cols-3 gap-3">
                     <img 
-                      src="/src/assests/favicon/TRANSPERENT PNG/favicon-01.png" 
+                      src="/src/assests/favicon/transparent_png/favicon-01.png" 
                       alt="Dukasmart Favicon 1" 
                       className="w-20 h-20"
                     />
                     <img 
-                      src="/src/assests/favicon/TRANSPERENT PNG/favicon-02.png" 
+                      src="/src/assests/favicon/transparent_png/favicon-02.png" 
                       alt="Dukasmart Favicon 2" 
                       className="w-20 h-20"
                     />
                     <img 
-                      src="/src/assests/favicon/TRANSPERENT PNG/favicon-03.png" 
+                      src="/src/assests/favicon/transparent_png/favicon-03.png" 
                       alt="Dukasmart Favicon 3" 
                       className="w-20 h-20"
                     />
