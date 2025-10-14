@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="fixed top-20 right-8 z-50 opacity-20">
         <img 
           src={BrandPattern} 
-          alt="DukaSmart Brand Pattern" 
+          alt="Dukasmart Brand Pattern" 
           className="w-32 h-32 object-contain"
         />
       </div>
@@ -27,7 +27,7 @@ const Contact = () => {
             <span className="text-black">Get Started</span> <span className="text-black">Today</span>
           </h1>
           <p className="text-xl text-black font-light leading-relaxed">
-            Ready to grow your business with DukaSmart? 
+            Ready to grow your business with Dukasmart? 
             Contact us and we'll help you get started.
           </p>
         </div>
@@ -46,8 +46,8 @@ const Contact = () => {
                 <div className="space-y-2">
                   <h3 className="text-lg font-light text-black">Email</h3>
                   <div className="space-y-1">
-                    <p className="text-xl text-black font-light">hello@dukasmart.com</p>
-                    <p className="text-xl text-black font-light">support@dukasmart.com</p>
+                    <p className="text-xl text-black font-light">hello@Dukasmart.com</p>
+                    <p className="text-xl text-black font-light">support@Dukasmart.com</p>
                   </div>
                 </div>
                 

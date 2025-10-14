@@ -26,7 +26,7 @@ const CTA = () => {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 Join thousands of successful businesses that have transformed 
-                their operations with DukaSmart.
+                their operations with Dukasmart.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ const CTA = () => {
             <div className="relative">
               <img 
                 src={BusinessCard} 
-                alt="DukaSmart Business Solutions" 
+                alt="Dukasmart Business Solutions" 
                 className="w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl"
               />
               

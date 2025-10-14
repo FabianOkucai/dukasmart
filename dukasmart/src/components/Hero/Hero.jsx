@@ -8,7 +8,7 @@ import AppIcon2 from '../../assests/app icons/Transperent Png/app icons-02.png'
 import AppIcon3 from '../../assests/app icons/Transperent Png/app icons-03.png'
 import AppIcon4 from '../../assests/app icons/Transperent Png/app icons-04.png'
 import Watch from '../../assests/MOCKUPS/WATCH.png'
-import AppIcon from '../../assests/app icons/Transperent Png/app icons-01.png'
+import AppIcon from '../../assests/app icons/Transperent Png/Dukasmart_logo.png'
 
 const Hero = () => {
   useEffect(() => {
@@ -39,10 +39,9 @@ const Hero = () => {
           <div className="flex items-center gap-3">
             <img 
               src={AppIcon} 
-              alt="DukaSmart logo" 
-              className="h-12 w-12 object-contain" 
+              alt="Dukasmart logo" 
+              className="w-42 object-contain" 
             />
-            <span className="text-xl font-light text-black">DukaSmart</span>
           </div>
           
           <div className="flex items-center gap-6">
@@ -62,9 +61,9 @@ const Hero = () => {
               {/* Left Content */}
               <div className="space-y-6 px-8">
                 <div className="space-y-4">
-                  <h1 className="text-3xl lg:text-4xl font-light text-white leading-tight">
-                    Smart Business Management 
-                    <span className="text-sky-300"> Made Simple</span>
+                  <h1 className="text-4xl lg:text-4xl font-bold text-white leading-tight">
+                    A home for your<br></br>
+                    <span className="text-orange-300">Business</span>
                   </h1>
                   
                   <p className="text-lg text-gray-200 leading-relaxed max-w-lg">
@@ -75,12 +74,12 @@ const Hero = () => {
                 <div className="pt-4 flex items-center gap-4">
                   <button 
                     onClick={() => document.querySelector('#features').scrollIntoView({ behavior: 'smooth' })}
-                    className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-light transition-all duration-300 inline-block btn-animate pulse-hover"
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-light transition-all duration-300 inline-block btn-animate pulse-hover"
                   >
                     Explore Features
                   </button>
                   <div className="bounce cursor-pointer" onClick={() => document.querySelector('#features').scrollIntoView({ behavior: 'smooth' })}>
-                    <svg className="w-6 h-6 text-sky-300 hover:text-sky-200 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-orange-300 hover:text-orange-200 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                   </div>
@@ -94,7 +93,7 @@ const Hero = () => {
                   <div className="absolute left-8 top-0 z-30 transform -rotate-12 float">
                     <img 
                       src={MobileApp} 
-                      alt="DukaSmart Mobile App" 
+                      alt="Dukasmart Mobile App" 
                       className="w-60 drop-shadow-2xl rounded-3xl"
                     />
                   </div>
@@ -104,7 +103,7 @@ const Hero = () => {
                     <div className="w-52 h-[400px] bg-white rounded-3xl shadow-2xl p-5">
                       <div className="space-y-4">
                         <div className="text-center">
-                          <h3 className="text-base font-light text-black mb-3">DukaSmart Suite</h3>
+                          <h3 className="text-base font-light text-black mb-3">Dukasmart Suite</h3>
                         </div>
                         <div className="grid grid-cols-2 gap-3">
                           <div className="bg-gray-50 p-3 rounded-xl text-center">
@@ -135,7 +134,7 @@ const Hero = () => {
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10">
                     <img 
                       src={Watch} 
-                      alt="DukaSmart Watch" 
+                      alt="Dukasmart Watch" 
                       className="w-32 drop-shadow-xl"
                     />
                   </div>

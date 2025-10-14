@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Section from '../components/UI/Section'
-import AppIcon from '../assests/app icons/Transperent Png/app icons-01.png'
+import AppIcon from '../assests/app icons/Transperent Png/dukasmart_logo.png'
 
 const About = () => {
   const values = [
@@ -52,10 +52,9 @@ const About = () => {
           <div className="flex items-center gap-3">
             <img 
               src={AppIcon} 
-              alt="DukaSmart logo" 
-              className="h-12 w-12 object-contain" 
+              alt="Dukasmart logo" 
+              className="w-40 object-contain" 
             />
-            <span className="text-xl font-light text-black">DukaSmart</span>
           </div>
           
           <div className="flex items-center gap-6">
@@ -69,7 +68,7 @@ const About = () => {
         </div>
         <div className="bg-white rounded-3xl p-12 shadow-lg">
           
-          <h1 className="text-5xl font-light text-black mb-8 text-center">About DukaSmart</h1>
+          <h1 className="text-5xl font-light text-black mb-8 text-center">About Dukasmart</h1>
           <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
             We're transforming how businesses operate with intelligent, user-friendly solutions 
             that drive growth and success in the digital age.
@@ -90,7 +89,7 @@ const About = () => {
             <h2 className="text-3xl font-light text-black mb-6 text-center">Our Story</h2>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Founded in 2025, DukaSmart emerged from a simple yet powerful vision: to democratize 
+                Founded in 2025, Dukasmart emerged from a simple yet powerful vision: to democratize 
                 access to enterprise-level business management tools. We believe every business, 
                 regardless of size, deserves sophisticated technology that drives success.
               </p>

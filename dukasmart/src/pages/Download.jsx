@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Section from '../components/UI/Section'
-import AppIcon from '../assests/app icons/Transperent Png/app icons-01.png'
+import AppIcon from '../assests/app icons/Transperent Png/dukasmart_logo.png'
 
 const Download = () => {
   return (
@@ -12,10 +12,9 @@ const Download = () => {
           <Link to="/" className="flex items-center gap-3">
             <img 
               src={AppIcon} 
-              alt="DukaSmart logo" 
-              className="h-10 w-10 object-contain" 
+              alt="Dukasmart logo" 
+              className=" w-42 object-contain" 
             />
-            <span className="text-xl font-light text-gray-800">DukaSmart</span>
           </Link>
           
           <Link 
@@ -33,7 +32,7 @@ const Download = () => {
       <Section className="py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-light text-gray-800 mb-6">
-            Download DukaSmart
+            Download Dukasmart
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Get the most powerful business management app and start growing your business today.
@@ -54,7 +53,7 @@ const Download = () => {
               <h3 className="text-2xl font-medium mb-4">Android App</h3>
               <p className="text-purple-200 mb-6">Available on Google Play Store</p>
               <a 
-                href="https://play.google.com/store/apps/details?id=com.dukasmart.apps" 
+                href="https://play.google.com/store/apps/details?id=com.Dukasmart.apps" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-white text-purple-950 px-8 py-4 rounded-xl font-medium hover:bg-gray-100 transition-colors"

@@ -26,7 +26,7 @@ const Features = () => {
     <div className="bg-white py-20" id="features">
       <Section>
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl font-light text-gray-800 mb-4">Run Your Shop Smarter with DukaSmart!</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Run Your Shop Smarter with Dukasmart!</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">Your all-in-one app to track sales, manage stock, and grow profits.</p>
         </div>
 
@@ -81,17 +81,17 @@ const Features = () => {
                   <div className="grid grid-cols-3 gap-3">
                     <img 
                       src="/src/assests/favicon/TRANSPERENT PNG/favicon-01.png" 
-                      alt="DukaSmart Favicon 1" 
+                      alt="Dukasmart Favicon 1" 
                       className="w-20 h-20"
                     />
                     <img 
                       src="/src/assests/favicon/TRANSPERENT PNG/favicon-02.png" 
-                      alt="DukaSmart Favicon 2" 
+                      alt="Dukasmart Favicon 2" 
                       className="w-20 h-20"
                     />
                     <img 
                       src="/src/assests/favicon/TRANSPERENT PNG/favicon-03.png" 
-                      alt="DukaSmart Favicon 3" 
+                      alt="Dukasmart Favicon 3" 
                       className="w-20 h-20"
                     />
                   </div>

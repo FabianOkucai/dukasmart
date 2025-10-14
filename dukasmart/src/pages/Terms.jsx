@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Section from '../components/UI/Section'
-import AppIcon from '../assests/app icons/Transperent Png/app icons-01.png'
+import AppIcon from '../assests/app icons/Transperent Png/dukasmart_logo.png'
 
 const Terms = () => {
   return (
@@ -12,10 +12,9 @@ const Terms = () => {
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img 
                 src={AppIcon} 
-                alt="DukaSmart logo" 
-                className="h-12 w-12 object-contain" 
+                alt="Dukasmart logo" 
+                className="w-40 object-contain" 
               />
-              <span className="text-xl font-light text-black">DukaSmart</span>
             </Link>
           </div>
           
@@ -28,7 +27,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-light text-black mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600">
-                By accessing or using DukaSmart's services, you agree to be bound by these Terms of Service
+                By accessing or using Dukasmart's services, you agree to be bound by these Terms of Service
                 and our Privacy Policy. If you do not agree to these terms, please do not use our services.
               </p>
             </section>
@@ -36,7 +35,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-light text-black mb-4">2. Service Description</h2>
               <p className="text-gray-600">
-                DukaSmart provides business management software solutions, including but not limited to:
+                Dukasmart provides business management software solutions, including but not limited to:
               </p>
               <ul className="list-disc pl-5 space-y-2 text-gray-600 mt-2">
                 <li>Inventory management</li>
@@ -80,8 +79,8 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-light text-black mb-4">6. Intellectual Property</h2>
               <p className="text-gray-600">
-                All content, features, and functionality of DukaSmart services are owned by
-                DukaSmart Limited and are protected by international copyright, trademark, and other
+                All content, features, and functionality of Dukasmart services are owned by
+                Dukasmart Limited and are protected by international copyright, trademark, and other
                 intellectual property laws.
               </p>
             </section>
@@ -89,7 +88,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-light text-black mb-4">7. Limitation of Liability</h2>
               <p className="text-gray-600">
-                DukaSmart shall not be liable for any indirect, incidental, special, consequential,
+                Dukasmart shall not be liable for any indirect, incidental, special, consequential,
                 or punitive damages arising from your use of our services.
               </p>
             </section>
@@ -116,7 +115,7 @@ const Terms = () => {
                 For questions about these Terms of Service, please contact:
               </p>
               <p className="text-gray-600 mt-2">
-                Email: info@dukasmart.com<br />
+                Email: info@Dukasmart.com<br />
                 Address: Nairobi, Kenya
               </p>
             </section>

@@ -29,7 +29,7 @@ const Testimonials = () => {
     {
       name: "Newton Brian",
       location: "Bungoma, Kenya",
-      text: "DukaSmart has made managing my shop much easier, especially with inventory tracking. However, I wish the app loaded a bit faster on my older phone.",
+      text: "Dukasmart has made managing my shop much easier, especially with inventory tracking. However, I wish the app loaded a bit faster on my older phone.",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -41,13 +41,13 @@ const Testimonials = () => {
     {
       name: "Frankline Karanja",
       location: "Kijabe, Kiambu, Kenya",
-      text: "DukaSmart is a game-changer! The app is easy to use and helps me keep track of my sales and stock with zero hassle. Highly recommended for any business owner.",
+      text: "Dukasmart is a game-changer! The app is easy to use and helps me keep track of my sales and stock with zero hassle. Highly recommended for any business owner.",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
       name: "Omae",
       location: "Nairobi, Kenya",
-      text: "DukaSmart transformed my business operations completely. The inventory management and sales tracking work seamlessly together for my electronics store.",
+      text: "Dukasmart transformed my business operations completely. The inventory management and sales tracking work seamlessly together for my electronics store.",
       avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -59,7 +59,7 @@ const Testimonials = () => {
     {
       name: "Mama Alarm",
       location: "Siwaka, Nairobi, Kenya",
-      text: "Customer analytics helped me understand my boutique customers better. Sales increased by 45% in just three months using DukaSmart insights.",
+      text: "Customer analytics helped me understand my boutique customers better. Sales increased by 45% in just three months using Dukasmart insights.",
       avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
     }
   ]

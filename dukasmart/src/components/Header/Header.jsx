@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../UI/Section'
-import AppIcon from '../../assests/app icons/Transperent Png/app icons-01.png'
+import AppIcon from '../../assests/app icons/Transperent Png/Dukasmart_logo.png'
 
 const Header = () => {
   return (
@@ -10,10 +10,9 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <img 
               src={AppIcon} 
-              alt="DukaSmart logo" 
-              className="h-16 w-16 object-contain" 
+              alt="Dukasmart logo" 
+              className="w-16 object-contain" 
             />
-            <span className="text-xl font-light text-white">DukaSmart</span>
           </div>
         </div>
       </Section>

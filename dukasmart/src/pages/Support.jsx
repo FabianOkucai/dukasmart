@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Section from '../components/UI/Section'
-import AppIcon from '../assests/app icons/Transperent Png/app icons-01.png'
+import AppIcon from '../assests/app icons/Transperent Png/dukasmart_logo.png'
 
 const Support = () => {
   const faqs = [
     {
-      question: "How do I get started with DukaSmart?",
+      question: "How do I get started with Dukasmart?",
       answer: "Download the app from your device's app store, create an account, and follow the setup wizard to configure your business profile. Our onboarding process will guide you through the essential features."
     },
     {
@@ -14,8 +14,8 @@ const Support = () => {
       answer: "We accept M-Pesa, credit/debit cards, and bank transfers. All payments are processed securely through our platform."
     },
     {
-      question: "Can I use DukaSmart offline?",
-      answer: "Yes, DukaSmart has offline functionality. Your data will sync automatically when you're back online."
+      question: "Can I use Dukasmart offline?",
+      answer: "Yes, Dukasmart has offline functionality. Your data will sync automatically when you're back online."
     },
     {
       question: "How secure is my business data?",
@@ -35,10 +35,9 @@ const Support = () => {
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img 
                 src={AppIcon} 
-                alt="DukaSmart logo" 
-                className="h-12 w-12 object-contain" 
+                alt="Dukasmart logo" 
+                className="w-40 object-contain" 
               />
-              <span className="text-xl font-light text-black">DukaSmart</span>
             </Link>
           </div>
           
@@ -46,7 +45,7 @@ const Support = () => {
             <h1 className="text-4xl font-bold text-black mb-4">Support Center</h1>
             <p className="text-gray-500 text-sm font-bold mb-4">Last updated: 08/10/2025</p>
             <p className="text-gray-600">
-              Get help with DukaSmart. Browse our FAQs or contact our support team.
+              Get help with Dukasmart. Browse our FAQs or contact our support team.
             </p>
           </div>
 
@@ -74,13 +73,13 @@ const Support = () => {
               <h3 className="text-2xl font-light text-black mb-3">Email Support</h3>
               <p className="text-gray-600 mb-4">Our support team is here to help you. We typically respond within 24 hours.</p>
               <a 
-                href="mailto:info@dukasmart.com?subject=DukaSmart Support Request" 
+                href="mailto:info@Dukasmart.com?subject=Dukasmart Support Request" 
                 className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium"
               >
                 Contact Support
               </a>
               <p className="text-gray-500 text-sm mt-4">
-                Email: info@dukasmart.com
+                Email: info@Dukasmart.com
               </p>
             </div>
           </div>

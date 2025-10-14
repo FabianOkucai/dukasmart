@@ -25,7 +25,7 @@ const Features = () => {
     },
     {
       title: "Access Anywhere",
-      description: "Use DukaSmart on your phone, tablet, or computer. Your data syncs automatically so you can work from anywhere.",
+      description: "Use Dukasmart on your phone, tablet, or computer. Your data syncs automatically so you can work from anywhere.",
       number: "04",
       details: ["Mobile app", "Web dashboard", "Offline mode", "Cloud sync"]
     },
@@ -49,7 +49,7 @@ const Features = () => {
       <div className="fixed top-20 right-8 z-50 opacity-20">
         <img 
           src={BrandPattern} 
-          alt="DukaSmart Brand Pattern" 
+          alt="Dukasmart Brand Pattern" 
           className="w-32 h-32 object-contain"
         />
       </div>
@@ -64,7 +64,7 @@ const Features = () => {
       <Section className="pt-32 pb-20 relative z-10">
         <div className="text-center max-w-4xl mx-auto space-y-8">
           <h1 className="text-5xl lg:text-7xl font-light leading-tight">
-            <span className="text-black">DukaSmart</span> <span className="text-black">Features</span>
+            <span className="text-black">Dukasmart</span> <span className="text-black">Features</span>
           </h1>
           <p className="text-xl text-black font-light leading-relaxed">
             Everything you need to run your business better, grow faster, and make more money.

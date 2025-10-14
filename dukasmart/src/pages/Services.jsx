@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Section from '../components/UI/Section'
-import AppIcon from '../assests/app icons/Transperent Png/app icons-01.png'
+import AppIcon from '../assests/app icons/Transperent Png/dukasmart_logo.png'
 
 const Services = () => {
   const services = [
@@ -51,10 +51,9 @@ const Services = () => {
           <div className="flex items-center gap-3">
             <img 
               src={AppIcon} 
-              alt="DukaSmart logo" 
-              className="h-12 w-12 object-contain" 
+              alt="Dukasmart logo" 
+              className="w-40 object-contain" 
             />
-            <span className="text-xl font-light text-black">DukaSmart</span>
           </div>
           
           <div className="flex items-center gap-6">

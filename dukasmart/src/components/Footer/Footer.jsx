@@ -4,7 +4,7 @@ import Section from '../UI/Section'
 import FacebookIcon from '../../assests/social media icon/1/social media icon-01.png'
 import TwitterIcon from '../../assests/social media icon/1/social media icon-02.png'
 import LinkedInIcon from '../../assests/social media icon/1/social media icon-03.png'
-import AppIcon from '../../assests/app icons/Transperent Png/app icons-01.png'
+import AppIcon from '../../assests/app icons/Transperent Png/Dukasmart_logo_white.png'
 
 const Footer = () => {
   useEffect(() => {
@@ -43,10 +43,9 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src={AppIcon} 
-                alt="DukaSmart logo" 
-                className="h-10 w-10 object-contain" 
+                alt="Dukasmart logo" 
+                className="w-42 object-contain" 
               />
-              <span className="text-xl font-light">DukaSmart</span>
             </div>
             <p className="text-purple-100 mb-6 max-w-md leading-relaxed">
               Empowering businesses with intelligent management solutions. 
@@ -78,7 +77,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-purple-100 text-sm">info@dukasmart.com</p>
+                  <p className="text-purple-100 text-sm">info@Dukasmart.com</p>
                 </div>
               </div>
               
@@ -111,7 +110,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-purple-800 pt-6 fade-in">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-purple-300 text-sm">© 2025 DukaSmart. All rights reserved.</p>
+            <p className="text-purple-300 text-sm">© 2025 Dukasmart. All rights reserved.</p>
             <div className="flex gap-6 text-sm">
               <Link to="/privacy" className="text-purple-300 hover:text-white transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-purple-300 hover:text-white transition-colors">Terms of Service</Link>
