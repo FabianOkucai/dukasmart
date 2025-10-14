@@ -8,6 +8,7 @@ import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Support from './pages/Support'
 import ComingSoon from './pages/ComingSoon'
+import DataDeletion from './pages/DataDeletion'
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="/support" element={<Support />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/data-deletion" element={<DataDeletion />} />
         </Routes>
       </div>
     </Router>
