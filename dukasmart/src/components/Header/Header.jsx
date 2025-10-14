@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../UI/Section'
-import AppIcon from '../../assests/app_icons/transparent_png/Dukasmart_logo.png'
+import AppIcon from '../../assests/app_icons/transparent_png/dukasmart_logo.png'
 
 const Header = () => {
   return (
