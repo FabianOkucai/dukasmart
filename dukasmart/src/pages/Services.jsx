@@ -67,7 +67,7 @@ const Services = () => {
         </div>
         <div className="bg-white rounded-3xl p-12 shadow-lg">
           
-          <h1 className="text-5xl font-light text-black mb-8 text-center">Our Services</h1>
+          <h1 className="text-5xl font-bold text-black mb-8 text-center">Our Services</h1>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
             Comprehensive business solutions designed to help you succeed.
           </p>
@@ -75,7 +75,7 @@ const Services = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className={`bg-${service.color}-50 rounded-2xl p-8`}>
-                <h3 className="text-2xl font-light text-black mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-bold text-black mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   {service.features.map((feature, i) => (

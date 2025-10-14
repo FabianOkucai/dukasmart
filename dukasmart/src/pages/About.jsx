@@ -86,7 +86,7 @@ const About = () => {
 
           {/* Story Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-light text-black mb-6 text-center">Our Story</h2>
+            <h2 className="text-3xl font-bold text-black mb-6 text-center">Our Story</h2>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Founded in 2025, Dukasmart emerged from a simple yet powerful vision: to democratize 
@@ -102,11 +102,11 @@ const About = () => {
           
           {/* Values Grid */}
           <div className="mb-16">
-            <h2 className="text-3xl font-light text-black mb-8 text-center">What Drives Us</h2>
+            <h2 className="text-3xl font-bold text-black mb-8 text-center">What Drives Us</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {values.map((value, index) => (
                 <div key={index} className={`bg-${value.color}-50 rounded-2xl p-8`}>
-                  <h3 className="text-2xl font-light text-black mb-4">{value.title}</h3>
+                  <h3 className="text-2xl font-bold text-black mb-4">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
                 </div>
               ))}
