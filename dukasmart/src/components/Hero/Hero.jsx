@@ -2,12 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import Section from '../UI/Section'
-import MobileApp from '../../assests/MOCKUPS/mobile on rock.png'
 import AppIcon1 from '../../assests/app icons/Transperent Png/app icons-01.png'
 import AppIcon2 from '../../assests/app icons/Transperent Png/app icons-02.png'
 import AppIcon3 from '../../assests/app icons/Transperent Png/app icons-03.png'
 import AppIcon4 from '../../assests/app icons/Transperent Png/app icons-04.png'
-import Watch from '../../assests/MOCKUPS/WATCH.png'
 import AppIcon from '../../assests/app icons/Transperent Png/Dukasmart_logo.png'
 
 const Hero = () => {
@@ -92,7 +90,7 @@ const Hero = () => {
                   {/* Main phone - tilted left */}
                   <div className="absolute left-8 top-0 z-30 transform -rotate-12 float">
                     <img 
-                      src={MobileApp} 
+                      src=""
                       alt="Dukasmart Mobile App" 
                       className="w-60 drop-shadow-2xl rounded-3xl"
                     />
@@ -133,7 +131,7 @@ const Hero = () => {
                   {/* Watch mockup - bottom center */}
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10">
                     <img 
-                      src={Watch} 
+                      src=""
                       alt="Dukasmart Watch" 
                       className="w-32 drop-shadow-xl"
                     />

@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Section from '../UI/Section'
-import BusinessCard from '../../assests/MOCKUPS/Free_Business_Card_Mockup_3.png'
 
 const CTA = () => {
   return (
@@ -72,7 +71,7 @@ const CTA = () => {
           <div className="relative z-10">
             <div className="relative">
               <img 
-                src={BusinessCard} 
+                src=""
                 alt="Dukasmart Business Solutions" 
                 className="w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl"
               />
