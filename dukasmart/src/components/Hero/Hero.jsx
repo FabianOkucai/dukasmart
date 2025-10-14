@@ -6,7 +6,7 @@ import Section from '../UI/Section'
 // import AppIcon2 from '../../assests/app_icons/transparent_png/app_icons-02.png'
 // import AppIcon3 from '../../assests/app_icons/transparent_png/app_icons-03.png'
 // import AppIcon4 from '../../assests/app_icons/transparent_png/app_icons-04.png'
-import AppIcon from '../../assests/app_icons/transparent_png/Dukasmart_logo.png'
+import AppIcon from '../../assests/app_icons/transparent_png/dukasmart_logo.png'
 
 const Hero = () => {
   useEffect(() => {
