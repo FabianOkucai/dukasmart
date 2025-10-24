@@ -4,7 +4,7 @@ import AppIcon from '../assests/app_icons/transparent_png/dukasmart_logo.png'
 
 const ComingSoon = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen p-4">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
           <div className="mb-8">

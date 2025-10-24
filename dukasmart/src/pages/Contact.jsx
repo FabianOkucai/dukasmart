@@ -4,7 +4,7 @@ import BrandPattern from '../assests/brand pattern/transperant png/brand pattern
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Brand Pattern Bookmark */}
       <div className="fixed top-20 right-8 z-50 opacity-20">
         <img 

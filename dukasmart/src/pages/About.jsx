@@ -25,10 +25,10 @@ const About = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
-      <div className="max-w-6xl mx-auto px-6">
+    <div className="min-h-screen p-4">
+      <div className="container-max">
         {/* Navigation */}
-        <div className="flex items-center justify-between py-6 mb-8 fade-in">
+        <div className="flex items-center justify-between py-6 mb-8">
           <div className="flex items-center gap-3">
             <img 
               src={AppIcon} 

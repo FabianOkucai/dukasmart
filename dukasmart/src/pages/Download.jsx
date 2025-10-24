@@ -5,10 +5,10 @@ import AppIcon from '../assests/app_icons/transparent_png/dukasmart_logo.png'
 
 const Download = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Navigation */}
       <div className="p-6">
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <div className="container-max flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <img 
               src={AppIcon} 
@@ -29,15 +29,16 @@ const Download = () => {
         </div>
       </div>
 
-      <Section className="py-20 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-light text-gray-800 mb-6">
-            Download Dukasmart
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Get the most powerful business management app and start growing your business today.
-          </p>
-        </div>
+      <div className="section-spacing">
+        <div className="container-max">
+          <div className="text-center-section">
+            <h1 className="text-5xl font-light text-gray-800 mb-6">
+              Download Dukasmart
+            </h1>
+            <p className="section-subtitle">
+              Get the most powerful business management app and start growing your business today.
+            </p>
+          </div>
 
         <div className="max-w-4xl mx-auto">
           {/* Download Options */}

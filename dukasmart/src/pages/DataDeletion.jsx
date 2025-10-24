@@ -3,7 +3,7 @@ import Footer from '../components/Footer/Footer'
 
 const DataDeletion = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col">
       <main className="flex-1">
         <section className="py-16 px-6 md:px-10 lg:px-16 bg-gradient-to-b from-white to-purple-50">
           <div className="max-w-3xl mx-auto">
