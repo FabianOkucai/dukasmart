@@ -62,7 +62,7 @@ const Support = () => {
             </div>
           </div>
 
-                    {/* Contact Options */}
+                    {/* Contact Options */}
           <div className="max-w-2xl mx-auto mb-12">
             <div className="bg-purple-50 rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">

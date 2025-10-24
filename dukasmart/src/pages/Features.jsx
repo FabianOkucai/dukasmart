@@ -54,14 +54,14 @@ const Features = () => {
         />
       </div>
 
-      {/* Split background - White left, Purple right */}
+      {/* Split background - White left, Purple right */}
       <div className="absolute inset-0">
         <div className="w-1/2 h-full bg-white absolute left-0 top-0"></div>
         <div className="w-1/2 h-full bg-purple-950 absolute right-0 top-0"></div>
       </div>
 
-      {/* Hero Section */}
-      <Section className="pt-32 pb-20 relative z-10">
+      {/* Hero Section */}
+      <Section className="pt-32 pb-20 relative z-10 max-w-6xl mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto space-y-8">
           <h1 className="text-5xl lg:text-7xl font-light leading-tight">
             <span className="text-black">Dukasmart</span> <span className="text-black">Features</span>
@@ -72,8 +72,8 @@ const Features = () => {
         </div>
       </Section>
       
-      {/* Features Grid */}
-      <Section className="pb-32 relative z-10">
+      {/* Features Grid */}
+      <Section className="pb-32 relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid gap-16 lg:grid-cols-2">
           {features.map((feature, index) => (
             <div key={index} className="space-y-6">
@@ -94,7 +94,7 @@ const Features = () => {
           ))}
         </div>
         
-        {/* Professional Branding Section */}
+        {/* Professional Branding Section */}
         <div className="mt-32 pt-32 border-t border-gray-200">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">

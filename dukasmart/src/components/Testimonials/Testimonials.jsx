@@ -101,13 +101,13 @@ const Testimonials = () => {
   }
 
   return (
-    <Section className="py-20 bg-gray-50">
+    <Section className="py-20 bg-gray-50 max-w-6xl mx-auto px-6">
       <div className="text-center mb-16 fade-in">
         <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">TESTIMONIALS</div>
         <h2 className="text-4xl font-light text-black mb-4">What Our Client Say!</h2>
       </div>
       
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative max-w-4xl mx-auto">
         {/* Navigation Arrows */}
         <button 
           onClick={prevTestimonial}
@@ -129,7 +129,7 @@ const Testimonials = () => {
           </svg>
         </button>
 
-        {/* Testimonials Container */}
+        {/* Testimonials Container */}
         <div className="flex items-center justify-center gap-8 px-16 overflow-hidden">
           {getVisibleTestimonials().map((testimonial, index) => (
             <div 
@@ -156,18 +156,18 @@ const Testimonials = () => {
               <div className={`bg-white p-8 rounded-2xl shadow-lg max-w-sm relative overflow-hidden ${
                 index === 1 ? 'ring-2 ring-purple-200 shadow-purple-100' : ''
               }`}>
-                {/* Gradient overlay for center card */}
+                {/* Gradient overlay for center card */}
                 {index === 1 && (
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-pink-50/50 pointer-events-none"></div>
                 )}
                 
                 <div className="relative z-10">
-                  {/* Testimonial Text */}
+                  {/* Testimonial Text */}
                   <p className="text-gray-700 mb-6 text-sm leading-relaxed italic">
                     "{testimonial.text}"
                   </p>
 
-                  {/* User Info */}
+                  {/* User Info */}
                   <div className="flex items-center gap-4">
                     <div className="relative">
                       <div
@@ -196,7 +196,7 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Pagination Dots */}
+        {/* Pagination Dots */}
         <div className="flex justify-center gap-3 mt-12">
           {testimonials.map((_, index) => (
             <button

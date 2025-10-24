@@ -8,7 +8,7 @@ const Download = () => {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <div className="p-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <img 
               src={AppIcon} 
@@ -29,7 +29,7 @@ const Download = () => {
         </div>
       </div>
 
-      <Section className="py-20">
+      <Section className="py-20 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-light text-gray-800 mb-6">
             Download Dukasmart
@@ -53,7 +53,7 @@ const Download = () => {
               <h3 className="text-2xl font-medium mb-4">Android App</h3>
               <p className="text-purple-200 mb-6">Available on Google Play Store</p>
               <a 
-                href="https://play.google.com/store/apps/details?id=com.Dukasmart.apps" 
+                href="https://play.google.com/store/apps/details?id=com.dukasmart.apps" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-white text-purple-950 px-8 py-4 rounded-xl font-medium hover:bg-gray-100 transition-colors"

@@ -14,14 +14,14 @@ const Contact = () => {
         />
       </div>
 
-      {/* Split background - Purple left, White right */}
+      {/* Split background - Purple left, White right */}
       <div className="absolute inset-0">
         <div className="w-1/2 h-full bg-purple-950 absolute left-0 top-0"></div>
         <div className="w-1/2 h-full bg-white absolute right-0 top-0"></div>
       </div>
 
-      {/* Hero Section */}
-      <Section className="pt-32 pb-20 relative z-10">
+      {/* Hero Section */}
+      <Section className="pt-32 pb-20 relative z-10 max-w-6xl mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto space-y-8">
           <h1 className="text-5xl lg:text-7xl font-light leading-tight">
             <span className="text-black">Get Started</span> <span className="text-black">Today</span>
@@ -33,9 +33,9 @@ const Contact = () => {
         </div>
       </Section>
       
-      <Section className="pb-32 relative z-10">
+      <Section className="pb-32 relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid gap-20 lg:grid-cols-2">
-          {/* Contact Information */}
+          {/* Contact Information */}
           <div className="space-y-12">
             <div className="space-y-8">
               <h2 className="text-3xl font-light text-black">
@@ -90,7 +90,7 @@ const Contact = () => {
             </div>
           </div>
           
-          {/* Contact Form */}
+          {/* Contact Form */}
           <div className="space-y-8">
             <h2 className="text-3xl font-light text-black">
               Send us a Message

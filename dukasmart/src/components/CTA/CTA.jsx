@@ -29,7 +29,7 @@ const CTA = () => {
               </p>
             </div>
 
-            {/* Numbered Benefits */}
+            {/* Numbered Benefits */}
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
@@ -67,7 +67,7 @@ const CTA = () => {
             </div>
           </div>
 
-          {/* Right Content - Image */}
+          {/* Right Content - Image */}
           <div className="relative z-10">
             <div className="relative">
               <img 
@@ -76,7 +76,7 @@ const CTA = () => {
                 className="w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl"
               />
               
-              {/* Floating elements */}
+              {/* Floating elements */}
               <div className="absolute -top-4 -left-4 bg-white shadow-lg rounded-xl p-4 border border-purple-100">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-600">30</div>
@@ -95,7 +95,7 @@ const CTA = () => {
         </div>
       </Section>
 
-      {/* Stats Section */}
+      {/* Stats Section */}
       <Section className="py-16 bg-purple-50">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="space-y-2">

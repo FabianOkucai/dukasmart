@@ -35,10 +35,10 @@ const Footer = () => {
         <div className="absolute bottom-5 right-10 w-32 h-32 bg-sky-300 rounded-full blur-3xl"></div>
       </div>
 
-      <Section className="relative z-10">
+      <Section className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 mb-8">
           
-          {/* Brand Section */}
+          {/* Brand Section */}
           <div className="slide-in-left">
             <div className="flex items-center gap-3 mb-4">
               <img 
@@ -52,7 +52,7 @@ const Footer = () => {
               Transform your operations, boost productivity, and drive sustainable growth.
             </p>
 
-            {/* Social Media */}
+            {/* Social Media */}
             <div className="flex gap-3">
               <Link to="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
                 <img src={FacebookIcon} alt="Facebook" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
@@ -66,7 +66,7 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Contact Info */}
+          {/* Contact Info */}
           <div className="slide-in-right">
             <h3 className="text-xl font-light mb-6 text-sky-300">Get in Touch</h3>
             <div className="space-y-4">
@@ -107,7 +107,7 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Bottom Section */}
+        {/* Bottom Section */}
         <div className="border-t border-purple-800 pt-6 fade-in">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-purple-300 text-sm">© 2025 Dukasmart. All rights reserved.</p>
