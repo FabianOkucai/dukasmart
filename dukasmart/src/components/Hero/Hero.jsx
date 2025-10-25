@@ -70,8 +70,9 @@ const Hero = () => {
           
           <div className="flex items-center gap-6">
             <Link to="/" className="text-black hover:text-purple-600 transition-colors">Home</Link>
-            <Link to="/about" className="text-black hover:text-purple-600 transition-colors">About</Link>
-            <Link to="/services" className="text-black hover:text-purple-600 transition-colors">Services</Link>
+            <a href="#about" className="text-black hover:text-purple-600 transition-colors">About</a>
+            <a href="#services" className="text-black hover:text-purple-600 transition-colors">Services</a>
+            <a href="#features" className="text-black hover:text-purple-600 transition-colors">Features</a>
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-colors">
               <a href="https://app.dukasmart.com/#/onboarding" target="_blank" rel="noopener noreferrer" className="text-white">Try Web App</a>
             </button>

@@ -1,8 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Hero, Features, Testimonials, Footer } from './components'
-import About from './pages/About'
-import Services from './pages/Services'
+import { Hero, About, Services, Features, Testimonials, Footer } from './components'
 import Download from './pages/Download'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
@@ -18,13 +16,13 @@ const App = () => {
           <Route path="/" element={
             <main>
               <Hero />
+              <About />
+              <Services />
               <Features />
               <Testimonials />
               <Footer />
             </main>
           } />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/download" element={<Download />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
