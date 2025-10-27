@@ -57,49 +57,56 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen p-4">
-      <div className="container-max">
+      <div className="container-max px-4">
         {/* Navigation */}
-        <div className="flex items-center justify-between py-6 mb-8">
+        <div className="flex items-center justify-between py-4 md:py-6 mb-4 md:mb-8">
           <div className="flex items-center gap-3">
             <img 
               src={AppIcon} 
               alt="Dukasmart logo" 
-              className="w-42 object-contain" 
+              className="w-32 md:w-40 lg:w-42 object-contain" 
             />
           </div>
           
-          <div className="flex items-center gap-6">
-            <Link to="/" className="text-black hover:text-purple-600 transition-colors">Home</Link>
-            <a href="#about" className="text-black hover:text-purple-600 transition-colors">About</a>
-            <a href="#services" className="text-black hover:text-purple-600 transition-colors">Services</a>
-            <a href="#features" className="text-black hover:text-purple-600 transition-colors">Features</a>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-colors">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+            <Link to="/" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">Home</Link>
+            <a href="#about" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">About</a>
+            <a href="#services" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">Services</a>
+            <a href="#features" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">Features</a>
+            <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 lg:px-6 py-2 rounded-full transition-colors text-sm lg:text-base">
               <a href="https://app.dukasmart.com/#/onboarding" target="_blank" rel="noopener noreferrer" className="text-white">Try Web App</a>
+            </button>
+          </div>
+          
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full transition-colors text-sm">
+              <a href="https://app.dukasmart.com/#/onboarding" target="_blank" rel="noopener noreferrer" className="text-white">Try App</a>
             </button>
           </div>
         </div>
 
         {/* Hero Section with rounded corners */}
-        <div className="bg-purple-950 rounded-3xl overflow-hidden absolute left-4 right-4 -mt-12">
-          <Section className="py-1 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[8vh] max-w-6xl mx-auto">
+        <div className="bg-purple-950 rounded-2xl md:rounded-3xl overflow-hidden mx-2 md:mx-4 -mt-8 md:-mt-12">
+          <Section className="py-8 md:py-12 lg:py-16 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto px-4 md:px-8">
               {/* Left Content */}
-              <div className="space-y-8 px-8">
-                <div className="space-y-6">
-                  <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <div className="space-y-6 md:space-y-8 text-center lg:text-left">
+                <div className="space-y-4 md:space-y-6">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
                     A home for your<br></br>
                     <span className="text-orange-300">Business</span>
                   </h1>
                   
-                  <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
+                  <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-lg mx-auto lg:mx-0">
                     Streamline operations, boost productivity, and drive growth with our comprehensive business platform.
                   </p>
                 </div>
 
-                <div className="pt-6">
+                <div className="pt-4 md:pt-6">
                   <Link 
                     to="/download"
-                    className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-light transition-colors inline-block text-lg"
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-light transition-colors inline-block text-base md:text-lg"
                   >
                     Get Mobile App
                   </Link>
@@ -107,13 +114,13 @@ const Hero = () => {
               </div>
 
               {/* Right Content - Dynamic Phone Slideshow */}
-              <div className="px-8 relative">
-                <div className="relative h-[600px] flex items-center justify-center">
+              <div className="px-4 md:px-8 relative order-first lg:order-last">
+                <div className="relative h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
                   {/* Background blur effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-orange-100/20 rounded-3xl blur-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-orange-100/20 rounded-2xl md:rounded-3xl blur-2xl md:blur-3xl"></div>
                   
                   {/* Main slideshow container */}
-                  <div className="relative w-72 h-[500px]">
+                  <div className="relative w-48 h-[320px] md:w-60 md:h-[400px] lg:w-72 lg:h-[500px]">
                     {emulatorImages.map((image, index) => {
                       const isActive = index === currentImageIndex
                       const isPrev = index === (currentImageIndex - 1 + emulatorImages.length) % emulatorImages.length

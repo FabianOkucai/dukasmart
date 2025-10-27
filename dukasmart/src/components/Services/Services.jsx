@@ -23,15 +23,15 @@ const Services = () => {
   }, [])
 
   return (
-    <div id="services" className="bg-white py-20">
+    <div id="services" className="bg-white py-12 md:py-16 lg:py-20">
       <Section>
-        <div className="text-center mb-16 fade-in">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">Comprehensive business solutions designed to help you succeed.</p>
+        <div className="text-center mb-12 md:mb-16 fade-in px-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">Comprehensive business solutions designed to help you succeed.</p>
         </div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto px-4 md:px-6">
           
           {/* Business Analytics */}
           <div className="bg-purple-950 p-10 rounded-2xl luxury-card slide-in-left relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">

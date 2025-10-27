@@ -1,7 +1,7 @@
 import React from 'react'
 import Section from '../components/UI/Section'
 import BusinessCard from '../assests/stationary/business card/Business Card-01.jpg'
-import BrandPattern from '../assests/brand pattern/transperant png/brand pattern-01.png'
+// import BrandPattern from '../assests/brand pattern/transperant png/brand pattern-01.png'
 
 const Features = () => {
   const features = [
@@ -48,7 +48,7 @@ const Features = () => {
       {/* Brand Pattern Bookmark */}
       <div className="fixed top-20 right-8 z-50 opacity-20">
         <img 
-          src={BrandPattern} 
+          src={/* BrandPattern */""} 
           alt="Dukasmart Brand Pattern" 
           className="w-32 h-32 object-contain"
         />
