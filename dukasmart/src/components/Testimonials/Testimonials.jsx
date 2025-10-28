@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from 'react'
 import Section from '../UI/Section'
 
@@ -101,13 +102,13 @@ const Testimonials = () => {
   }
 
   return (
-    <Section className="py-20 bg-gray-50 max-w-6xl mx-auto px-6">
+    <div className="py-20 bg-gray-50 container-max">
       <div className="text-center mb-16 fade-in">
         <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">TESTIMONIALS</div>
         <h2 className="text-4xl font-light text-black mb-4">What Our Client Say!</h2>
       </div>
       
-      <div className="relative max-w-4xl mx-auto">
+      <div className="relative max-w-4xl mx-auto scale-in">
         {/* Navigation Arrows */}
         <button 
           onClick={prevTestimonial}
@@ -212,7 +213,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
-    </Section>
+    </div>
   )
 }
 

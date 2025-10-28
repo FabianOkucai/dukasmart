@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect } from 'react'
 import Section from '../UI/Section'
 
@@ -24,7 +25,7 @@ const Services = () => {
 
   return (
     <div id="services" className="bg-white py-12 md:py-16 lg:py-20">
-      <Section>
+      <div className="container-max">
         <div className="text-center mb-12 md:mb-16 fade-in px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">Comprehensive business solutions designed to help you succeed.</p>
@@ -112,7 +113,7 @@ const Services = () => {
 
         </div>
 
-      </Section>
+      </div>
     </div>
   )
 }

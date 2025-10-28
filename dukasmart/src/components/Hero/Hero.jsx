@@ -1,5 +1,7 @@
+'use client'
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 import Section from '../UI/Section'
 import AppIcon from '../../assests/app_icons/transparent_png/dukasmart_logo.png'
@@ -29,11 +31,10 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % emulatorImages.length)
-      setTransitionType((prev) => (prev + 1) % transitionEffects.length)
-    }, 4000)
+    }, 6000)
 
     return () => clearInterval(interval)
-  }, [emulatorImages.length, transitionEffects.length])
+  }, [emulatorImages.length])
 
   useEffect(() => {
     const observerOptions = {
@@ -61,7 +62,7 @@ const Hero = () => {
         {/* Navigation */}
         <div className="flex items-center justify-between py-4 md:py-6 mb-4 md:mb-8">
           <div className="flex items-center gap-3">
-            <img 
+            <Image 
               src={AppIcon} 
               alt="Dukasmart logo" 
               className="w-32 md:w-40 lg:w-42 object-contain" 
@@ -69,12 +70,12 @@ const Hero = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-4 lg:gap-6">
-            <Link to="/" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">Home</Link>
-            <a href="#about" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">About</a>
+            <Link href="/" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">Home</Link>
+            <a href="#stats" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">Stats</a>
             <a href="#services" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">Services</a>
             <a href="#features" className="text-black hover:text-purple-600 transition-colors text-sm lg:text-base">Features</a>
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 lg:px-6 py-2 rounded-full transition-colors text-sm lg:text-base">
-              <a href="https://app.dukasmart.com/#/onboarding" target="_blank" rel="noopener noreferrer" className="text-white">Try Web App</a>
+              <a href="https://app.dukasmart.com/#/onboarding" target="_blank" rel="noopener noreferrer" className="text-white">Try Dukasmart</a>
             </button>
           </div>
           
@@ -88,24 +89,25 @@ const Hero = () => {
 
         {/* Hero Section with rounded corners */}
         <div className="bg-purple-950 rounded-2xl md:rounded-3xl overflow-hidden mx-2 md:mx-4 -mt-8 md:-mt-12">
-          <Section className="py-8 md:py-12 lg:py-16 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto px-4 md:px-8">
+          <div className="py-8 md:py-12 lg:py-16 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center container-max">
               {/* Left Content */}
-              <div className="space-y-6 md:space-y-8 text-center lg:text-left">
-                <div className="space-y-4 md:space-y-6">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                    A home for your<br></br>
-                    <span className="text-orange-300">Business</span>
-                  </h1>
+              <div className="space-y-6 md:space-y-8 text-center lg:text-left px-6 md:px-8 lg:px-12">
+                <div className="space-y-4 md:space-y-6">   
                   
-                  <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                    Streamline operations, boost productivity, and drive growth with our comprehensive business platform.
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+                    A home for your <span className="text-orange-500"> Business</span>
+                    </h1>
+
+                  <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                    Streamline operations, boost productivity, and drive growth 
+                    with our comprehensive business platform.
                   </p>
                 </div>
 
                 <div className="pt-4 md:pt-6">
                   <Link 
-                    to="/download"
+                    href="/download"
                     className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-light transition-colors inline-block text-base md:text-lg"
                   >
                     Get Mobile App
@@ -123,62 +125,23 @@ const Hero = () => {
                   <div className="relative w-48 h-[320px] md:w-60 md:h-[400px] lg:w-72 lg:h-[500px]">
                     {emulatorImages.map((image, index) => {
                       const isActive = index === currentImageIndex
-                      const isPrev = index === (currentImageIndex - 1 + emulatorImages.length) % emulatorImages.length
-                      const isNext = index === (currentImageIndex + 1) % emulatorImages.length
-                      
-                      let transitionClass = ''
-                      
-                      // Dynamic transition effects based on transitionType
-                      switch(transitionType) {
-                        case 0: // slide-fade
-                          transitionClass = isActive 
-                            ? 'opacity-100 scale-100 translate-x-0 rotate-0 z-20' 
-                            : isPrev 
-                            ? 'opacity-30 scale-90 -translate-x-20 -rotate-12 z-10'
-                            : isNext
-                            ? 'opacity-30 scale-90 translate-x-20 rotate-12 z-10'
-                            : 'opacity-0 scale-75 translate-y-20 z-0'
-                          break
-                        case 1: // zoom-rotate
-                          transitionClass = isActive 
-                            ? 'opacity-100 scale-110 rotate-0 z-20' 
-                            : isPrev 
-                            ? 'opacity-40 scale-70 -rotate-45 z-10'
-                            : isNext
-                            ? 'opacity-40 scale-70 rotate-45 z-10'
-                            : 'opacity-0 scale-50 rotate-90 z-0'
-                          break
-                        case 2: // flip-scale
-                          transitionClass = isActive 
-                            ? 'opacity-100 scale-105 rotateY-0 z-20' 
-                            : isPrev 
-                            ? 'opacity-35 scale-80 rotateY-60 -translate-x-16 z-10'
-                            : isNext
-                            ? 'opacity-35 scale-80 rotateY-60 translate-x-16 z-10'
-                            : 'opacity-0 scale-60 rotateY-180 z-0'
-                          break
-                        case 3: // bounce-blur
-                          transitionClass = isActive 
-                            ? 'opacity-100 scale-100 translate-y-0 blur-0 z-20' 
-                            : isPrev 
-                            ? 'opacity-50 scale-85 translate-y-8 blur-sm -rotate-20 z-10'
-                            : isNext
-                            ? 'opacity-50 scale-85 translate-y-8 blur-sm rotate-20 z-10'
-                            : 'opacity-0 scale-70 translate-y-16 blur-md z-0'
-                          break
-                      }
                       
                       return (
                         <div
                           key={index}
-                          className={`absolute inset-0 transition-all duration-1500 ease-in-out transform ${transitionClass}`}
+                          className={`absolute inset-0 transition-all duration-1500 ease-in-out transform ${
+                            isActive 
+                              ? 'opacity-100 z-20 scale-100 rotate-0 blur-0' 
+                              : 'opacity-20 z-10 scale-90 rotate-1 blur-sm'
+                          }`}
                           style={{
                             filter: isActive 
-                              ? 'drop-shadow(0 25px 50px rgba(147, 51, 234, 0.4))' 
-                              : 'drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2))'
+                              ? 'drop-shadow(0 25px 50px rgba(147, 51, 234, 0.4)) brightness(1.1) saturate(1.2)' 
+                              : 'drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1)) brightness(0.8) saturate(0.7)',
+                            transform: `${isActive ? 'translateY(0) scale(1)' : 'translateY(10px) scale(0.9)'} rotateY(${isActive ? '0deg' : '5deg'})`
                           }}
                         >
-                          <img
+                          <Image
                             src={image.src}
                             alt={image.alt}
                             className="w-full h-auto rounded-3xl phone-glow"
@@ -204,7 +167,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </Section>
+          </div>
         </div>
         
         {/* Spacer to prevent overlap with next section */}

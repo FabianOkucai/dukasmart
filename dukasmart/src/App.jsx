@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Hero, About, Services, Features, Testimonials, Footer } from './components'
+import { Hero, Stats, Services, Features, Testimonials, Footer } from './components'
 import Download from './pages/Download'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/" element={
             <main>
               <Hero />
-              <About />
+              <Stats />
               <Services />
               <Features />
               <Testimonials />

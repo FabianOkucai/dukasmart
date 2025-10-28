@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect } from 'react'
 import Section from '../UI/Section'
 
@@ -25,7 +26,7 @@ const Features = () => {
   return (
     <div className="section-spacing" id="features">
       <div className="container-max">
-        <div className="text-center-section">
+        <div className="text-center-section fade-in">
           <h2 className="section-title">Run Your Shop Smarter with Dukasmart!</h2>
           <p className="section-subtitle">Your all-in-one app to track sales, manage stock, and grow profits.</p>
         </div>
@@ -34,7 +35,7 @@ const Features = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* Smart Inventory Management */}
-          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl slide-in-left">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold mb-4">Smart Inventory Management</h3>
               <p className="text-purple-100 leading-relaxed">Track your stock levels in real-time, get low stock alerts, and never run out of your best-selling items.</p>
@@ -45,7 +46,7 @@ const Features = () => {
           </div>
 
           {/* Sales Tracking */}
-          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl scale-in">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold mb-4">Sales Tracking</h3>
               <p className="text-purple-100 leading-relaxed">Monitor daily, weekly, and monthly sales performance with detailed analytics and growth insights.</p>
@@ -56,7 +57,7 @@ const Features = () => {
           </div>
 
           {/* Customer Insights */}
-          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl slide-in-right">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold mb-4">Customer Insights</h3>
               <p className="text-purple-100 leading-relaxed">Understand your customers better with purchase history and preferences to boost repeat sales.</p>
@@ -67,7 +68,7 @@ const Features = () => {
           </div>
 
           {/* Expense Management - Large Card */}
-          <div className="md:col-span-2 bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="md:col-span-2 bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl fade-in">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Expense Management</h3>
               <p className="text-purple-100 leading-relaxed mb-6">Keep track of all business expenses, categorize costs, and maintain healthy profit margins with smart budgeting tools.</p>
@@ -78,7 +79,7 @@ const Features = () => {
           </div>
 
           {/* Reports & Analytics */}
-          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl scale-in">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold mb-4">Reports & Analytics</h3>
               <p className="text-purple-100 leading-relaxed">Generate comprehensive business reports and get actionable insights to make informed decisions.</p>

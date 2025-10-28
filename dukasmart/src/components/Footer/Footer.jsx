@@ -1,5 +1,7 @@
+'use client'
+import Image from 'next/image'
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import Section from '../UI/Section'
 import FacebookIcon from '../../assests/social_media_icon/1/linkedin.png'
 import TwitterIcon from '../../assests/social_media_icon/1/instagram.png'
@@ -35,13 +37,13 @@ const Footer = () => {
         <div className="absolute bottom-5 right-10 w-32 h-32 bg-sky-300 rounded-full blur-3xl"></div>
       </div>
 
-      <Section className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 container-max">
         <div className="grid md:grid-cols-2 gap-12 mb-8">
           
           {/* Brand Section */}
           <div className="slide-in-left">
             <div className="flex items-center gap-3 mb-4">
-              <img 
+              <Image 
                 src={AppIcon} 
                 alt="Dukasmart logo" 
                 className="w-42 object-contain" 
@@ -54,14 +56,14 @@ const Footer = () => {
 
             {/* Social Media */}
             <div className="flex gap-3">
-              <Link to="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
-                <img src={FacebookIcon} alt="Facebook" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
+              <Link href="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <Image src={FacebookIcon} alt="Facebook" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
               </Link>
-              <Link to="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
-                <img src={TwitterIcon} alt="Twitter" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
+              <Link href="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <Image src={TwitterIcon} alt="Twitter" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
               </Link>
-              <Link to="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
-                <img src={LinkedInIcon} alt="LinkedIn" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
+              <Link href="/coming-soon" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <Image src={LinkedInIcon} alt="LinkedIn" className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
@@ -112,14 +114,14 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-purple-300 text-sm">© 2025 Dukasmart. All rights reserved.</p>
             <div className="flex gap-6 text-sm">
-              <Link to="/privacy" className="text-purple-300 hover:text-white transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="text-purple-300 hover:text-white transition-colors">Terms of Service</Link>
-              <Link to="/support" className="text-purple-300 hover:text-white transition-colors">Support</Link>
-              <Link to="/data-deletion" className="text-purple-300 hover:text-white transition-colors">Request Data Deletion</Link>
+              <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-purple-300 hover:text-white transition-colors">Terms of Service</Link>
+              <Link href="/support" className="text-purple-300 hover:text-white transition-colors">Support</Link>
+              <Link href="/data-deletion" className="text-purple-300 hover:text-white transition-colors">Request Data Deletion</Link>
             </div>
           </div>
         </div>
-      </Section>
+      </div>
     </footer>
   )
 }
