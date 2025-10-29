@@ -55,7 +55,7 @@ const Hero = () => {
           <div className="py-8 md:py-12 lg:py-16 relative z-10">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center container-max">
               {/* Left Content */}
-              <div className="space-y-6 md:space-y-8 text-center lg:text-left px-6 md:px-8 lg:px-12">
+              <div className="space-y-6 md:space-y-8 text-center lg:text-left px-3 md:px-5 lg:px-8">
                 <div className="space-y-4 md:space-y-6">   
                   
                   <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
