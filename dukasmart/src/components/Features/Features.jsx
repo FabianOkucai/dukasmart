@@ -1,30 +1,15 @@
-'use client'
-import React, { useEffect } from 'react'
-import Section from '../UI/Section'
+import React from 'react'
+import ScrollAnimationWrapper from '../UI/ScrollAnimationWrapper'
 
+/**
+ * Features component - Server-rendered for SEO with progressive enhancement
+ * All content is rendered on the server and visible to crawlers.
+ * Animations are added via client-side wrapper for enhanced UX.
+ */
 const Features = () => {
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible')
-        }
-      })
-    }, observerOptions)
-
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in')
-    animatedElements.forEach(el => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <div className="section-spacing" id="features">
+    <ScrollAnimationWrapper>
+      <div className="section-spacing" id="features">
       <div className="container-max">
         <div className="text-center-section fade-in">
           <h2 className="section-title">Run Your Shop Smarter with Dukasmart!</h2>
@@ -57,7 +42,7 @@ const Features = () => {
           </div>
 
           {/* Customer Insights */}
-          <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl slide-in-right">
+          <div className="bg-orange-500 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl slide-in-right">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold mb-4">Customer Insights</h3>
               <p className="text-purple-100 leading-relaxed">Understand your customers better with purchase history and preferences to boost repeat sales.</p>
@@ -92,6 +77,7 @@ const Features = () => {
         </div>
       </div>
     </div>
+    </ScrollAnimationWrapper>
   )
 }
 

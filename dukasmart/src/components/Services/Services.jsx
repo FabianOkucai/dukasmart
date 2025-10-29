@@ -1,28 +1,6 @@
-'use client'
-import React, { useEffect } from 'react'
-import Section from '../UI/Section'
+import React from 'react'
 
 const Services = () => {
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible')
-        }
-      })
-    }, observerOptions)
-
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in')
-    animatedElements.forEach(el => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <div id="services" className="bg-white py-12 md:py-16 lg:py-20">
       <div className="container-max">
@@ -90,7 +68,7 @@ const Services = () => {
           </div>
 
           {/* Security & Backup */}
-          <div className="bg-purple-950 p-10 rounded-2xl luxury-card slide-in-left relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+          <div className="bg-orange-500 p-10 rounded-2xl luxury-card slide-in-left relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 leading-tight">Security & Backup</h3>
               <p className="text-purple-100 text-sm leading-relaxed">Keep business data safe with enterprise-grade security.</p>

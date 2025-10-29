@@ -243,22 +243,47 @@ body {
   from { width: 0%; }
   to { width: 100%; }
 }
-/* Scroll animations */
-.fade-in {
+/* Scroll animations - SEO-friendly with progressive enhancement */
+/* Content is visible by default for crawlers, then enhanced with JS */
+
+/* Base state: visible for SEO and no-JS users */
+.fade-in,
+.slide-in-left,
+.slide-in-right,
+.scale-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hidden state: only applied when JS is available */
+.fade-in:not(.visible) {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease-out;
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-in-left {
+.slide-in-left:not(.visible) {
   opacity: 0;
   transform: translateX(-50px);
   transition: all 0.8s ease-out;
+}
+
+.slide-in-right:not(.visible) {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scale-in:not(.visible) {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease-out;
+}
+
+/* Visible state: animated in */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .slide-in-left.visible {
@@ -266,21 +291,9 @@ body {
   transform: translateX(0);
 }
 
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.8s ease-out;
-}
-
 .slide-in-right.visible {
   opacity: 1;
   transform: translateX(0);
-}
-
-.scale-in {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.8s ease-out;
 }
 
 .scale-in.visible {
