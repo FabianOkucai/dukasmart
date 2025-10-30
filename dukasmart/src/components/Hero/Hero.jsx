@@ -23,8 +23,8 @@ const Hero = () => {
 
   return (
     <ScrollAnimationWrapper>
-      <div className="min-h-screen p-4 bg-purple-950 overflow-hidden">
-        <div className="container-max px-4">
+      <div className="min-h-screen bg-purple-950 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Navigation */}
           <div className="flex items-center justify-between py-4 md:py-6 mb-4 md:mb-8">
             <div className="flex items-center gap-3">
@@ -51,11 +51,11 @@ const Hero = () => {
           </div>
 
           {/* Hero Section with rounded corners */}
-          <div className="bg-purple-950 rounded-2xl md:rounded-3xl overflow-hidden px-2 md:px-2 -mt-8 md:-mt-12">
-          <div className="py-8 md:py-12 lg:py-16 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center container-max">
+          <div className="bg-purple-950 rounded-2xl md:rounded-3xl overflow-hidden -mt-8 md:-mt-12">
+          <div className="py-8 md:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left Content */}
-              <div className="space-y-6 md:space-y-8 text-center lg:text-left px-3 md:px-5 lg:px-8">
+              <div className="space-y-6 md:space-y-8 text-center lg:text-left">
                 <div className="space-y-4 md:space-y-6">   
                   
                   <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">

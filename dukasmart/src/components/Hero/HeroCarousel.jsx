@@ -18,7 +18,7 @@ export default function HeroCarousel({ images }) {
   }, [images.length])
 
   return (
-    <div className="px-4 md:px-8 relative order-first lg:order-last">
+    <div className="relative order-first lg:order-last">
       <div className="relative h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
         {/* Background blur effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-orange-100/20 rounded-2xl md:rounded-3xl blur-2xl md:blur-3xl"></div>
