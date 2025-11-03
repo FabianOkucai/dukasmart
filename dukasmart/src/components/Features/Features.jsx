@@ -39,7 +39,7 @@ const Features = () => {
           <div className="bg-orange-500 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl slide-in-right">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold mb-4">Receipts</h3>
-              <p className="text-purple-100 leading-relaxed">Receipt books ni expensive sana, kuwa digital. Send receipts to your customers fast and maintain your official copies. Haha huwezi gongwa.</p>
+              <p className="text-purple-100 leading-relaxed">Receipt books ni expensive sana, kuwa digital. Send receipts to your customers fast and maintain your official copies. Hapa huwezi gongwa.</p>
             </div>
           </div>
 
