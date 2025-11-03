@@ -59,12 +59,11 @@ const Hero = () => {
                 <div className="space-y-4 md:space-y-6">   
                   
                   <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                    A home for your <span className="text-orange-500"> Business</span>
+                    A home for your <span className="text-orange-500">business</span>
                     </h1>
 
                   <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                    Streamline operations, boost productivity, and drive growth 
-                    with our comprehensive business platform.
+                    Run your business smoothly with Dukasmart. Sell faster, track smarter, serve better - kila kitu from one powerful yet simple system.
                   </p>
                 </div>
 

@@ -5,11 +5,11 @@ import Testimonials from '../components/Testimonials/Testimonials'
 import Footer from '../components/Footer/Footer'
 
 export const metadata = {
-  title: 'Home',
-  description: 'Dukasmart - The smart way to manage your business. Track inventory, manage sales, and grow your business with powerful analytics and insights.',
+  title: 'Dukasmart - A home for your business',
+  description: 'Dukasmart - A home for your business. Track inventory, manage sales, and grow your business with powerful analytics and insights.',
   openGraph: {
-    title: 'Dukasmart - Smart Business Management Solutions',
-    description: 'The smart way to manage your business. Track inventory, manage sales, and grow with powerful analytics.',
+    title: 'Dukasmart - A home for your business',
+    description: 'A home for your business. Track inventory, manage sales, and grow with powerful analytics.',
   }
 }
 

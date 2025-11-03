@@ -12,21 +12,18 @@ const Features = () => {
       <div className="section-spacing" id="features">
       <div className="container-max">
         <div className="text-center-section fade-in">
-          <h2 className="section-title">Run Your Shop Smarter with Dukasmart!</h2>
-          <p className="section-subtitle">Your all-in-one app to track sales, manage stock, and grow profits.</p>
+          <h2 className="section-title">Our Services</h2>
+          <p className="section-subtitle">Kila kitu at the palm of your hands</p>
         </div>
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          {/* Smart Inventory Management */}
+
+          {/* Smart Inventory */}
           <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl slide-in-left">
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold mb-4">Smart Inventory Management</h3>
-              <p className="text-purple-100 leading-relaxed">Track your stock levels in real-time, get low stock alerts, and never run out of your best-selling items.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm">Real-time stock monitoring with automated alerts for low inventory levels</p>
+              <h3 className="text-2xl font-semibold mb-4">Smart Inventory</h3>
+              <p className="text-purple-100 leading-relaxed">Mambo ya stock haitawahi kustress. Track your stock levels in real-time, get low stock alerts, and never run out of your best-selling items.</p>
             </div>
           </div>
 
@@ -34,46 +31,40 @@ const Features = () => {
           <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl scale-in">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold mb-4">Sales Tracking</h3>
-              <p className="text-purple-100 leading-relaxed">Monitor daily, weekly, and monthly sales performance with detailed analytics and growth insights.</p>
+              <p className="text-purple-100 leading-relaxed">Angalia vile duka yako inaperform. Monitor daily, weekly, and monthly sales performance with detailed analytics and insights.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm">Comprehensive sales analytics with performance trends and forecasting</p>
+          </div>
+
+          {/* Receipts */}
+          <div className="bg-orange-500 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl slide-in-right">
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4">Receipts</h3>
+              <p className="text-purple-100 leading-relaxed">Receipt books ni expensive sana, kuwa digital. Send receipts to your customers fast and maintain your official copies. Haha huwezi gongwa.</p>
+            </div>
+          </div>
+
+          {/* Point of Sale - Large Card */}
+          <div className="md:col-span-2 bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl fade-in">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Point of Sale</h3>
+              <p className="text-purple-100 leading-relaxed mb-6">Kuuza ni mbio mbio. Your checkout counter upgraded, quick selling, instant receipts. Serve customers wake haraka, avoid long lines.</p>
             </div>
           </div>
 
           {/* Customer Insights */}
-          <div className="bg-orange-500 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl slide-in-right">
-            <div className="mb-6">
-              <h3 className="text-2xl font-semibold mb-4">Customer Insights</h3>
-              <p className="text-purple-100 leading-relaxed">Understand your customers better with purchase history and preferences to boost repeat sales.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm">Deep customer behavior analysis and personalized recommendations</p>
-            </div>
-          </div>
-
-          {/* Expense Management - Large Card */}
-          <div className="md:col-span-2 bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl fade-in">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Expense Management</h3>
-              <p className="text-purple-100 leading-relaxed mb-6">Keep track of all business expenses, categorize costs, and maintain healthy profit margins with smart budgeting tools.</p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:bg-white/20">
-                <p className="text-purple-200 text-sm">Advanced financial tracking with automated categorization, real-time budget monitoring, and intelligent cost optimization recommendations to maximize your business profitability.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Reports & Analytics */}
           <div className="bg-purple-950 p-8 rounded-2xl relative overflow-hidden text-white transform transition-all duration-300 hover:scale-105 hover:shadow-2xl scale-in">
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold mb-4">Reports & Analytics</h3>
-              <p className="text-purple-100 leading-relaxed">Generate comprehensive business reports and get actionable insights to make informed decisions.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm">AI-powered business intelligence with actionable growth recommendations</p>
+              <h3 className="text-2xl font-semibold mb-4">Customer Insights</h3>
+              <p className="text-purple-100 leading-relaxed">Jua wacustomer wako vizuri. Store customer contacts, view their purchase history, and send receipts with one click. No more "nipe number yako tena" every time.</p>
             </div>
           </div>
 
+        </div>
+
+        {/* And More Section */}
+        <div className="mt-12 bg-purple-950 p-8 rounded-2xl text-white">
+          <h3 className="text-2xl font-semibold mb-4">And more</h3>
+          <p className="text-purple-100 leading-relaxed">Hatujamalizia bado. Multiple users for your staff, backup your data automatically, access from any device, and get dedicated support when you need help. Everything you need, kila kitu iko.</p>
         </div>
       </div>
     </div>
