@@ -1,0 +1,6 @@
+# Modern browsers only - reduces polyfills and legacy code
+# This targets browsers with >0.2% market share that support modern ES6+ features
+>0.2%
+not dead
+not op_mini all
+last 2 versions

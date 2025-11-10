@@ -1,8 +1,22 @@
+import dynamic from 'next/dynamic'
 import Hero from '../components/Hero/Hero'
-import About from '../components/About/About'
-import Features from '../components/Features/Features'
-import Testimonials from '../components/Testimonials/Testimonials'
-import Footer from '../components/Footer/Footer'
+
+// Lazy load components that are below the fold for better initial load performance
+const Features = dynamic(() => import('../components/Features/Features'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+
+const About = dynamic(() => import('../components/About/About'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+
+const Testimonials = dynamic(() => import('../components/Testimonials/Testimonials'), {
+  loading: () => <div className="min-h-[300px]" />,
+})
+
+const Footer = dynamic(() => import('../components/Footer/Footer'), {
+  loading: () => <div className="min-h-[200px]" />,
+})
 
 export const metadata = {
   title: 'Dukasmart - A home for your business',
