@@ -10,13 +10,9 @@ export const metadata = {
   keywords: ['business management', 'inventory management', 'POS system', 'sales tracking', 'Kenya business software', 'Dukasmart'],
   authors: [{ name: 'Dukasmart Limited' }],
   icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.png', type: 'image/png' }
-    ],
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',
