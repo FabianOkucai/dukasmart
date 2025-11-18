@@ -3,8 +3,8 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
 import AppIcon from '../../assests/app_icons/transparent_png/dukasmart_logo_white.png'
-import EmulatorImg1 from '../../assests/emulator/dukasmart.png'
-import EmulatorImg2 from '../../assests/emulator/inventory.png'
+import EmulatorImg1 from '../../assests/emulator/inventory.png'
+import EmulatorImg2 from '../../assests/emulator/inventory2.png'
 import EmulatorImg3 from '../../assests/emulator/goodmorning.png'
 import EmulatorImg4 from '../../assests/emulator/settings.png'
 
@@ -12,8 +12,8 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const emulatorImages = [
-    { src: EmulatorImg1, alt: "Dukasmart Mobile App" },
-    { src: EmulatorImg2, alt: "Dukasmart Inventory" },
+    { src: EmulatorImg1, alt: "Dukasmart Inventory Management" },
+    { src: EmulatorImg2, alt: "Dukasmart Stock Overview" },
     { src: EmulatorImg3, alt: "Dukasmart Dashboard" },
     { src: EmulatorImg4, alt: "Dukasmart Settings" }
   ]
