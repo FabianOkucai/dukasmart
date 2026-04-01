@@ -1,42 +1,33 @@
 'use client'
 import { useState } from 'react'
 
-/**
- * Client-side carousel component for Testimonials
- * Handles interactive carousel logic while keeping content SEO-friendly
- */
-export default function TestimonialCarousel({ testimonials }) {
+export default function TestimonialCarousel({ testimonials, dark = false }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
-  const nextTestimonial = () => {
+  const navigate = (direction) => {
     if (isTransitioning) return
     setIsTransitioning(true)
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+      setCurrentIndex((prev) =>
+        direction === 'next'
+          ? (prev + 1) % testimonials.length
+          : (prev - 1 + testimonials.length) % testimonials.length
+      )
       setIsTransitioning(false)
-    }, 300)
+    }, 250)
   }
 
-  const prevTestimonial = () => {
-    if (isTransitioning) return
-    setIsTransitioning(true)
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-      setIsTransitioning(false)
-    }, 300)
-  }
-
-  const goToTestimonial = (index) => {
+  const goTo = (index) => {
     if (isTransitioning || index === currentIndex) return
     setIsTransitioning(true)
     setTimeout(() => {
       setCurrentIndex(index)
       setIsTransitioning(false)
-    }, 300)
+    }, 250)
   }
 
-  const getVisibleTestimonials = () => {
+  const getVisible = () => {
     const visible = []
     for (let i = 0; i < 3; i++) {
       const index = (currentIndex + i) % testimonials.length
@@ -45,107 +36,102 @@ export default function TestimonialCarousel({ testimonials }) {
     return visible
   }
 
+  const btnClass = dark
+    ? 'bg-white/[0.08] border border-white/[0.08] hover:bg-white/[0.12] text-white/60 hover:text-white'
+    : 'bg-white shadow-md hover:shadow-lg text-gray-600'
+
   return (
-    <div className="relative max-w-4xl mx-auto scale-in">
-      {/* Navigation Arrows */}
+    <div className="relative max-w-5xl mx-auto scale-in">
+      {/* Nav arrows */}
       <button
-        onClick={prevTestimonial}
+        onClick={() => navigate('prev')}
         disabled={isTransitioning}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-110 flex items-center justify-center group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+        className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-10 w-10 h-10 rounded-full transition-all duration-300 flex items-center justify-center cursor-pointer disabled:opacity-30 ${btnClass}`}
       >
-        <svg className="w-5 h-5 text-gray-600 group-hover:text-purple-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
       <button
-        onClick={nextTestimonial}
+        onClick={() => navigate('next')}
         disabled={isTransitioning}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-110 flex items-center justify-center group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+        className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-10 w-10 h-10 rounded-full transition-all duration-300 flex items-center justify-center cursor-pointer disabled:opacity-30 ${btnClass}`}
       >
-        <svg className="w-5 h-5 text-gray-600 group-hover:text-purple-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
-      {/* Testimonials Container */}
-      <div className="flex items-center justify-center gap-8 px-16 overflow-hidden">
-        {getVisibleTestimonials().map((testimonial, index) => (
-          <div
-            key={`${currentIndex}-${index}`}
-            className={`transition-all duration-700 ease-in-out transform ${
-              isTransitioning
-                ? index === 1
-                  ? 'scale-95 opacity-60 blur-sm'
-                  : 'scale-85 opacity-40 blur-md'
-                : index === 1
-                  ? 'scale-110 z-20 shadow-2xl'
-                  : 'scale-90 opacity-70 hover:opacity-90 hover:scale-95'
-            }`}
-            style={{
-              transform: `${
-                isTransitioning
-                  ? `translateX(${index === 0 ? '-20px' : index === 2 ? '20px' : '0'}) scale(${index === 1 ? '0.95' : '0.85'})`
-                  : `translateX(0) scale(${index === 1 ? '1.1' : '0.9'})`
-              }`,
-              filter: isTransitioning ? `blur(${index === 1 ? '2px' : '4px'})` : 'blur(0)',
-              transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)'
-            }}
-          >
-            <div className={`bg-white p-8 rounded-2xl shadow-lg max-w-sm relative overflow-hidden ${
-              index === 1 ? 'ring-2 ring-purple-200 shadow-purple-100' : ''
-            }`}>
-              {/* Gradient overlay for center card */}
-              {index === 1 && (
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-pink-50/50 pointer-events-none"></div>
-              )}
+      {/* Cards */}
+      <div className="flex items-stretch justify-center gap-4 px-6 md:px-16 overflow-hidden">
+        {getVisible().map((testimonial, index) => {
+          const isCenter = index === 1
+          return (
+            <div
+              key={`${currentIndex}-${index}`}
+              className={`transition-all duration-500 ease-out flex-1 min-w-0 ${
+                isCenter ? 'z-20' : 'hidden md:block opacity-40'
+              }`}
+              style={{
+                transform: isCenter ? 'scale(1)' : 'scale(0.96)',
+                transition: 'all 0.5s cubic-bezier(0.22, 1, 0.36, 1)',
+              }}
+            >
+              <div className={`rounded-2xl p-7 h-full flex flex-col ${
+                dark
+                  ? isCenter
+                    ? 'bg-white/[0.08] border border-white/[0.1] backdrop-blur-sm'
+                    : 'bg-white/[0.04] border border-white/[0.05]'
+                  : isCenter
+                    ? 'bg-white shadow-lg border border-gray-100 ring-1 ring-purple-50'
+                    : 'bg-white border border-gray-100'
+              }`}>
+                {/* Quote */}
+                <div className={`text-3xl font-display leading-none mb-4 ${
+                  dark ? 'text-orange-400/30' : 'text-orange-400/25'
+                }`}>&ldquo;</div>
 
-              <div className="relative z-10">
-                {/* Testimonial Text */}
-                <p className="text-gray-700 mb-6 text-sm leading-relaxed italic">
-                  "{testimonial.text}"
+                <p className={`text-[14px] leading-relaxed flex-1 mb-6 ${
+                  dark ? 'text-purple-100/60' : 'text-gray-600'
+                }`}>
+                  {testimonial.text}
                 </p>
 
-                {/* User Info */}
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <div
-                      className={`w-12 h-12 flex items-center justify-center rounded-full text-white font-bold text-lg uppercase select-none transition-all duration-500 ${
-                        index === 1 ? 'ring-2 ring-purple-300 shadow-lg' : ''
-                      } bg-purple-950`}
-                    >
-                      {testimonial.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                    </div>
-                    {index === 1 && (
-                      <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-20 animate-pulse"></div>
-                    )}
+                <div className={`flex items-center gap-3 pt-4 border-t ${
+                  dark ? 'border-white/[0.06]' : 'border-gray-100'
+                }`}>
+                  <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold font-display ${
+                    dark ? 'bg-white/[0.1] text-white' : 'bg-purple-950 text-white'
+                  }`}>
+                    {testimonial.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                   </div>
                   <div>
-                    <div className={`font-medium text-gray-900 text-sm transition-colors duration-300 ${
-                      index === 1 ? 'text-purple-900' : ''
-                    }`}>
+                    <div className={`font-semibold text-sm ${dark ? 'text-white/80' : 'text-gray-900'}`}>
                       {testimonial.name}
                     </div>
-                    <div className="text-gray-500 text-xs">{testimonial.location}</div>
+                    <div className={`text-xs ${dark ? 'text-purple-200/40' : 'text-gray-400'}`}>
+                      {testimonial.location}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
 
-      {/* Pagination Dots */}
-      <div className="flex justify-center gap-3 mt-12">
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-10">
         {testimonials.map((_, index) => (
           <button
             key={index}
-            onClick={() => goToTestimonial(index)}
+            onClick={() => goTo(index)}
             disabled={isTransitioning}
-            className={`h-3 rounded-full transition-all duration-500 cursor-pointer disabled:cursor-not-allowed ${
+            className={`h-2 rounded-full transition-all duration-400 cursor-pointer ${
               index === currentIndex
-                ? 'bg-gradient-to-r from-purple-600 to-pink-600 w-8 shadow-lg'
-                : 'bg-gray-300 hover:bg-gray-400 w-3 hover:w-6'
+                ? dark ? 'bg-orange-400 w-7' : 'bg-purple-950 w-7'
+                : dark ? 'bg-white/20 hover:bg-white/30 w-2' : 'bg-gray-300 hover:bg-gray-400 w-2'
             }`}
           />
         ))}

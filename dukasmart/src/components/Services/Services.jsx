@@ -1,98 +1,92 @@
 import React from 'react'
+import ScrollAnimationWrapper from '../UI/ScrollAnimationWrapper'
+
+const services = [
+  {
+    title: 'Payment Solutions',
+    description: 'Integrated payment processing that works with how your customers prefer to pay.',
+    details: 'M-Pesa integration \u00b7 Card payments \u00b7 Bank transfers \u00b7 Auto-reconciliation',
+  },
+  {
+    title: 'Invoicing & Billing',
+    description: 'Professional invoices and automated billing that keeps your cash flow healthy.',
+    details: 'Custom invoices \u00b7 Payment reminders \u00b7 Balance tracking \u00b7 Branded templates',
+  },
+  {
+    title: 'Tax & Compliance',
+    description: 'Stay on the right side of KRA with automated tax calculations and filing support.',
+    details: 'VAT calculations \u00b7 iTax integration \u00b7 TIMS compliance \u00b7 Tax-ready reports',
+  },
+  {
+    title: 'Bookkeeping & Financial Management',
+    description: 'Keep your finances organized without the overhead of a full accounting department.',
+    details: 'Expense tracking \u00b7 P&L statements \u00b7 Cash flow reports \u00b7 Bank reconciliation',
+    wide: true,
+  },
+  {
+    title: 'Dedicated Support',
+    description: 'A real team that knows your business and picks up the phone when you call.',
+    details: 'Account manager \u00b7 Phone & WhatsApp \u00b7 Staff training \u00b7 Onboarding',
+    accent: true,
+  },
+  {
+    title: 'Inventory & Stock',
+    description: 'Real-time visibility into what you have, what is selling, and what needs restocking.',
+    details: 'Stock tracking \u00b7 Low stock alerts \u00b7 Supplier management \u00b7 Multi-location',
+  },
+  {
+    title: 'Custom Solutions',
+    description: 'Need something specific? We build around your workflows, not the other way around.',
+    details: 'Workflow automation \u00b7 Custom reports \u00b7 API integrations \u00b7 Tailored dashboards',
+  },
+]
 
 const Services = () => {
   return (
-    <div id="services" className="bg-white py-12 md:py-16 lg:py-20">
-      <div className="container-max">
-        <div className="text-center mb-12 md:mb-16 fade-in px-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">Comprehensive business solutions designed to help you succeed.</p>
-        </div>
-
-        {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto px-4 md:px-6">
-          
-          {/* Business Analytics */}
-          <div className="bg-purple-950 p-10 rounded-2xl luxury-card slide-in-left relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 leading-tight">Business Analytics</h3>
-              <p className="text-purple-100 text-sm leading-relaxed">Get deep insights into your business performance with advanced analytics tools.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm leading-relaxed">Real-time dashboards • Custom reports • Performance metrics</p>
-            </div>
+    <ScrollAnimationWrapper>
+      <div id="services" className="section-spacing" style={{ backgroundColor: 'var(--warm-gray)' }}>
+        <div className="container-max">
+          <div className="text-center mb-16 fade-in">
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-500 mb-4 block">How We Work</span>
+            <h2 className="section-title">Every business is different.<br className="hidden md:block" /> We build accordingly.</h2>
+            <p className="section-subtitle mt-4">We take the time to understand yours and build solutions that fit.</p>
           </div>
 
-          {/* Inventory Management */}
-          <div className="bg-purple-950 p-10 rounded-2xl luxury-card scale-in relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 leading-tight">Inventory Management</h3>
-              <p className="text-purple-100 text-sm leading-relaxed">Keep track of stock levels and never run out of best-selling items.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm leading-relaxed">Stock tracking • Low stock alerts • Supplier management</p>
-            </div>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
+            {services.map((service, index) => (
+              <div
+                key={service.title}
+                className={`fade-in delay-${Math.min((index + 1) * 100, 500)} ${service.wide ? 'md:col-span-2' : ''}`}
+              >
+                <div className={`relative rounded-2xl p-8 lg:p-10 card-lift overflow-hidden h-full ${
+                  service.accent
+                    ? 'bg-orange-500 text-white'
+                    : 'bg-purple-950 text-white'
+                }`}>
+                  <div className="grain absolute inset-0" />
 
-          {/* Customer Management */}
-          <div className="bg-purple-950 p-10 rounded-2xl luxury-card slide-in-right relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 leading-tight">Customer Management</h3>
-              <p className="text-purple-100 text-sm leading-relaxed">Build stronger relationships with customers and increase loyalty.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm leading-relaxed">Customer profiles • Purchase history • Loyalty programs</p>
-            </div>
-          </div>
-
-          {/* Payment Processing - Large Card */}
-          <div className="md:col-span-2 bg-purple-950 p-10 rounded-2xl luxury-card fade-in relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <div className="max-w-4xl">
-              <h3 className="text-2xl font-semibold mb-6 leading-tight">Payment Processing</h3>
-              <p className="text-purple-100 text-base leading-relaxed mb-8">Accept payments seamlessly with integrated payment solutions that support multiple methods and ensure secure transactions.</p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-white/20">
-                <p className="text-purple-200 text-base leading-relaxed">Multiple payment methods • Secure transactions • Instant settlements • PCI compliance</p>
+                  <div className="relative z-10">
+                    <h3 className="text-lg lg:text-xl font-bold font-display mb-3">{service.title}</h3>
+                    <p className={`text-[15px] leading-relaxed mb-6 ${
+                      service.accent ? 'text-orange-100/80' : 'text-purple-100/60'
+                    }`}>
+                      {service.description}
+                    </p>
+                    <div className={`rounded-xl p-4 text-sm ${
+                      service.accent ? 'bg-white/10' : 'bg-white/[0.06] border border-white/[0.06]'
+                    }`}>
+                      <p className={service.accent ? 'text-orange-100/70' : 'text-purple-200/40'}>
+                        {service.details}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-
-          {/* Mobile Solutions */}
-          <div className="bg-purple-950 p-10 rounded-2xl luxury-card slide-in-right relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 leading-tight">Mobile Solutions</h3>
-              <p className="text-purple-100 text-sm leading-relaxed">Manage your business on the go with mobile applications.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm leading-relaxed">iOS & Android apps • Offline capabilities • Real-time sync</p>
-            </div>
-          </div>
-
-          {/* Security & Backup */}
-          <div className="bg-orange-500 p-10 rounded-2xl luxury-card slide-in-left relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 leading-tight">Security & Backup</h3>
-              <p className="text-purple-100 text-sm leading-relaxed">Keep business data safe with enterprise-grade security.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm leading-relaxed">256-bit encryption • Automatic backups • Data recovery</p>
-            </div>
-          </div>
-
-          {/* Support & Training */}
-          <div className="bg-purple-950 p-10 rounded-2xl luxury-card scale-in relative overflow-hidden text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 leading-tight">Support & Training</h3>
-              <p className="text-purple-100 text-sm leading-relaxed">Get expert help and training to maximize your business potential.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 transition-all duration-300 hover:bg-white/20">
-              <p className="text-purple-200 text-sm leading-relaxed">24/7 support • Video tutorials • Live training sessions</p>
-            </div>
-          </div>
-
         </div>
-
       </div>
-    </div>
+    </ScrollAnimationWrapper>
   )
 }
 
